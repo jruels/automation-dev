@@ -3,7 +3,7 @@
 This site includes the labs for the Automation Developer class.
 
 ## Labs
-Lab 0: [Setup](labs/setup)   
+Lab 0: [Setup](labs/aws_setup)   
 
 ### Day 1
 Lab 1: [Python guessing game](labs/py_guessing_game)    

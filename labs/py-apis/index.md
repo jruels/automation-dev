@@ -4,10 +4,10 @@
 1. **Verify Installation**  
    ```bash
    # Check Python version
-   python3 --version
+   python --version
    
    # Check pip version
-   python3 -m pip --version
+   python -m pip --version
    ```
 
 2. **Create and Activate Virtual Environment**  
@@ -17,7 +17,7 @@
    cd python-api-lab
    
    # Create virtual environment
-   python3 -m venv venv
+   python -m venv venv
    
    # Activate virtual environment
    # For macOS/Linux:
@@ -31,8 +31,8 @@
 3. **Install Required Packages**  
    ```bash
    # After activating virtual environment
-   python3 -m pip install requests
-   python3 -m pip install aiohttp
+   python -m pip install requests
+   python -m pip install aiohttp
    ```
 
 4. **When You're Done**  
@@ -63,10 +63,10 @@ Note: Always make sure your virtual environment is activated (you'll see `(venv)
 
 4. **Run the code**
    ```bash
-   python3 example.py
+   python example.py
    ```
 
-Note: These steps apply to ALL code examples in this guide. Just copy any example into a .py file and run it using `python3 filename.py`
+Note: These steps apply to ALL code examples in this guide. Just copy any example into a .py file and run it using `python filename.py`
 
 ### Step 1: Basic GET Request
 Let's start with a simple GET request to retrieve data from an API.

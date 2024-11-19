@@ -1,5 +1,3 @@
-# Terraform Lab 2
-
 ## Overview 
 In this lab you will update the existing `main.tf` file to use variables. 
 

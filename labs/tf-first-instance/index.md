@@ -1,5 +1,3 @@
-# Terraform Lab 1
-
 # Overview
 This lab walks through setting up Terraform and creating your first resources. 
 

@@ -13,3 +13,5 @@ Lab 3: [AWS environment](labs/aws_setup)
 
 ### Day 2
 Lab 4: [Terraform - Create an instance](labs/tf-first-instance)    
+Lab 5: [Variables and output](labs/tf-variables-and-output)   
+Lab 6: [Multi resource deployment](labs/tf-more-variables)   

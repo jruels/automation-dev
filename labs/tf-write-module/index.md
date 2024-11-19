@@ -1,5 +1,3 @@
-# Terraform Lab 5
-
 ## Overview
 In this lab, you will create a module to manage AWS S3 buckets to host static websites.
 

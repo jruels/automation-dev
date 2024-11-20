@@ -17,3 +17,9 @@ Lab 6: [Multi resource deployment](labs/tf-more-variables)
 Lab 7: OPTIONAL: [Enable remote state](labs/tf-remote-state)   
 Lab 8: [Write a module](labs/tf-write-module)   
 Lab 9: [Refactor monolithic code](labs/tf-refactor)   
+
+
+### Day 3
+Lab 10: [Access Ansible VMs](labs/setup)    
+Lab 11: [Install Ansible](labs/setup-ansible)    
+Lab 12: [Ansible inventory](labs/inventory)    

@@ -62,7 +62,7 @@ mkdir -p keys/{consultant,supervisor}/.ssh
 
 
 
-Generate SSH key for `consultant` and `supervisor` users.
+Generate SSH key for `consultant` and `supervisor` users. **RUN EACH LINE SEPARATELY**
 
 ```
 ssh-keygen -f keys/consultant/.ssh/id_rsa
@@ -95,4 +95,4 @@ ansible -i inventory dbsystems -b -m service -a "name=auditd state=started enabl
 
 ## Conclusion
 
-We can see, by watching output from those commands, that they all ran successfully. Congratulations!
+By watching the output from those commands, we can see that they all ran successfully. Congratulations!

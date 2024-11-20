@@ -37,11 +37,7 @@ mkdir /home/ansible/lab-inventory && cd /home/ansible/lab-inventory
 
 ### Configure the `media` Host Group to Contain `media1` and `media2`
 
-1. Create the `inventory` file:
-
-   `touch /home/ansible/lab-inventory/inventory `
-
-2. Create `/home/ansible/lab-inventory/inventory ` with your preferred editor
+1. Create `/home/ansible/lab-inventory/inventory ` with your preferred editor
 
 3. Paste in the following:
 
@@ -63,15 +59,7 @@ mkdir /home/ansible/lab-inventory && cd /home/ansible/lab-inventory
 
    `cd group_vars/ `
 
-3. Create a `media` file:
-
-   `touch media `
-
-4. Edit the `media` file:
-
-   
-
-5. Paste in the following:
+3. Create a `media` file with the following:
 
    ```
    media_content: /tmp/var/media/content/

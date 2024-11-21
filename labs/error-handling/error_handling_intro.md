@@ -148,7 +148,7 @@ sudo su - ansible
 ```
 
 ```sh
-ansible-playbook ~/ansible-best-practices/labs/error-handling/maint/break_stuff.yml --tags service_down
+ansible-playbook ~/automation-dev/labs/error-handling/maint/break_stuff.yml --tags service_down
 ```
 
 Confirm the host is no longer reachable 
@@ -163,7 +163,7 @@ Run the playbook again and confirm it gracefully handles the failure.
 Restore the service using `break_stuff.yml`, and confirm the `report.yml` playbook reports the service is back online.
 
 ```
-ansible-playbook ~/ansible-best-practices/labs/error-handling/maint/break_stuff.yml --tags service_up
+ansible-playbook ~/automation-dev/labs/error-handling/maint/break_stuff.yml --tags service_up
 ```
 
 ```

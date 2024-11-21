@@ -25,3 +25,9 @@ Lab 11: [Install Ansible](labs/setup-ansible)
 Lab 12: [Ansible inventory](labs/inventory)    
 Lab 13: [Ansible ad-hoc](labs/ad-hoc)    
 Lab 14: [Ansible playbook fundamentals](labs/playbook-fun)    
+
+
+### Day 4
+Lab 15: [Ansible Playbook Error Handling](labs/error-handling/)   
+Lab 16: [Ansible Templating](labs/templates/)   
+Lab 17: [Install Ansible Tower](labs/install-aap/)   

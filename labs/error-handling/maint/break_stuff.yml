@@ -1,0 +1,19 @@
+- hosts: localhost
+  connection: local
+  become: yes
+  become_user: root
+  tasks:
+    - name: "Simulate connection failure"
+      lineinfile:
+        path: /etc/hosts
+        line: 127.0.0.1 bit.ly
+      tags:
+      - service_down
+        
+    - name: "Restore service"
+      lineinfile:
+        path: /etc/hosts
+        line: 127.0.0.1 bit.ly
+        state: absent
+      tags:
+      - service_up

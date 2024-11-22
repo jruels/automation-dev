@@ -1,0 +1,19 @@
+# Encrypt GH Token 
+Create a file containing the following. Remember to replace with your GitHub Personal Access Token  
+github_token: <YOUR TOKEN>
+
+Use vault to encrypt the file:
+ansible-vault encrypt gh_token
+
+Create `gh_password` file with the passphrase used to encrypt `gh_token`
+
+# Execute the playbook 
+Create a repo 
+ansible-playbook -e @gh_token --vault-password-file gh_password play.yml --tags create_repo
+
+`-e` - Populates the environment variable `{{ github_token}}` with the encrypted vault file
+`--vault-password-file` - Supplies the vault password to ansible
+`--tags` - Used to run specific tasks to either create or delete the repo. 
+
+Delete a repo 
+ansible-playbook -e @gh_token --vault-password-file gh_password play.yml --tags delete_repo

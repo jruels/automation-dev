@@ -1,0 +1,28 @@
+- hosts: localhost
+  vars_prompt:
+    - name: github_username
+      prompt: Enter your GitHub Username
+  tasks:
+    - name: Create a GitHub Repo
+      github_repo:
+        github_auth_key: "{{ github_token }}"
+        username: "{{ github_username }}"
+        name: "Hello-World"
+        description: "First repo created with custom Ansible module"
+        private: yes
+        has_issues: no
+        has_wiki: no
+        has_downloads: no
+        state: present
+      register: result
+      tags:
+        - create_repo
+
+    - name: Delete GitHub Repo
+      github_repo:
+        github_auth_key:  "{{ github_token }}"
+        username: "{{ github_username }}"
+        name: "Hello-World"
+        state: absent
+      tags:
+        - delete_repo

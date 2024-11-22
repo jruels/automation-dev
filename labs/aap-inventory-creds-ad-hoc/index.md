@@ -9,6 +9,31 @@ This exercise will cover
   - Ansible Automation Controller **Credentials**
 - Running ad hoc commands via the Ansible Automation Platform web UI
 
+## Prerequisites 
+
+### Configure the `ansible` user on the Control Node
+
+Add a new `ansible` user to the control node. This user will be used for running `ansible` tasks. 
+
+On the Controller node run: 
+
+```
+sudo useradd ansible
+```
+
+
+
+Configure the `ansible` user on the control node for ssh shared key access to the managed nodes.
+
+**Note:** Do not use a passphrase for the key pair.
+
+Create a key pair for the `ansible` user on the control host, accepting the defaults when prompted:
+
+```
+sudo su - ansible
+ssh-keygen 
+```
+
 
 
 ## Create an Inventory

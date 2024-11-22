@@ -81,62 +81,20 @@ mkdir roles
 
    Save and exit with **Escape** followed by `:wq`.
 
-### Configure the Role to Install the Latest Nagios Client
-
-1. We need to install the `nrpe.x86_64` package.
-
-2. Create a file which will install the package named `deploy_nagios.yml`:
-
-   `vim baseline/tasks/deploy_nagios.yml `
-
-3. Add the following content:
-
-   ```yaml
-   ---
-   - name: Install prerequisite EPEL repository
-     yum:
-       name:
-         - epel-release
-       state: latest
-   
-   - name: Install Nagios client (nrpe)
-     yum:
-       name:
-         - nrpe
-       state: latest
-   ```
-
    
 
-   Save and exit with **Escape** followed by `:wq`.
-
-4. Open `main.yml`:
-
-   `vim baseline/tasks/main.yml `
-
-5. Add the following lines to the bottom of the file:
-
-   ```yaml
-   - name: deploy nagios client
-     import_tasks: deploy_nagios.yml
-   ```
-
-   Save and exit with **Escape** followed by `:wq`.
-
-   
-
-### Configure the Role to Add an Entry to `/etc/hosts` for the Nagios Server
+### Configure the Role to Add an Entry to `/etc/hosts`
 
 1. Create a file called `edit_hosts.yml`:
 
    `vim baseline/tasks/edit_hosts.yml `
 
-2. Add the following content, substituting `<IP_ADDRESS>` with the node1 server IP from the spreadsheet:
+2. Add the following content:
 
    ```yaml
    ---
    - lineinfile:
-       line: "<IP_ADDRESS of node1 from spreadsheet> nagios.example.com"
+       line: "{{ ansible_default_ipv4.address }} {{ inventory_hostname_short }}.example.com"
        path: /etc/hosts
    ```
 
@@ -266,10 +224,6 @@ node2 ansible_host=<IP of node2 from spreadsheet>
 2. See if the `noc` user was set up:
 
    `id noc `
-
-3. Check to see if the `nrpe` package was installed:
-
-   `sudo yum list nrpe `
 
 ## Conclusion
 

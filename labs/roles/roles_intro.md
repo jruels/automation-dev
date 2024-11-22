@@ -94,8 +94,10 @@ mkdir roles
    ```yaml
    ---
    - lineinfile:
+   {% raw %}
        line: "{{ ansible_default_ipv4.address }} {{ inventory_hostname_short }}.example.com"
        path: /etc/hosts
+   {% endraw %}
    ```
 
    

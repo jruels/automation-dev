@@ -1,7 +1,7 @@
 | Name                 | Username    | Virtual Machine Password | Virtual Machine Portal                  |
 |----------------------|-------------|--------------------------|----------------------------------------|
 | Mohammad Azad        | WNS2022-85  | TEKwns2022!              | https://my.ablazedesktop.com |
-| Derek Bloom          | WNS2022-86  | TEKwns2022!              |                                        |
+| Derek Bloom          | WNS2022-104  | TEKwns2022!              |                                        |
 | Daniel Dunn          | WNS2022-86  | TEKwns2022!              |                                        |
 | Arthur Edmiston      | WNS2022-87  | TEKwns2022!              |                                        |
 | Devon Green          | WNS2022-88  | TEKwns2022!              |                                        |

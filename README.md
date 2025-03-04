@@ -5,6 +5,7 @@ This site includes the labs for the Automation Developer class.
 ## Labs
 [Lab environment details](https://docs.google.com/spreadsheets/d/1gTV6btPeIyyXylRkDn2_LNbWkf9BGU6wsi5eIb-ynLY/edit?usp=sharing)
 
+[Windows VMs](VM_access.md)
 ### Day 1
 Lab 1: [Python guessing game](labs/py_guessing-game)    
 Lab 2: [Using Python to interact with APIs](labs/py-apis)   

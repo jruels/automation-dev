@@ -1,3 +1,5 @@
+# Terraform Variables
+
 ## Overview 
 In this lab you will update the existing `main.tf` file to use variables. 
 
@@ -91,6 +93,12 @@ You can use Terraform outputs to connect Terraform projects with other parts of 
 Destroy the infrastructure you created
 ```sh
 terraform destroy -auto-approve
+```
+
+Remove the `.terraform` directory to free up disk space
+
+```shell
+rm -rf .terraform
 ```
 
 # Congrats!

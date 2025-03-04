@@ -444,5 +444,11 @@ Run `terraform destroy` specifying `dev.tfvars` with the `-var-file` flag.
 terraform destroy -var-file=dev.tfvars
 ```
 
+Remove the `.terraform` directory to free up disk space
+
+```shell
+rm -rf .terraform
+```
+
 ## Congrats!
 

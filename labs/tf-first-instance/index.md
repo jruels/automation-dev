@@ -1,3 +1,5 @@
+# Create your first Terraform resource
+
 # Overview
 This lab walks through setting up Terraform and creating your first resources. 
 
@@ -159,6 +161,12 @@ In this case the plan is acceptable, so type `yes` at the confirmation prompt to
 Destroy the infrastructure you created 
 ```sh
 terraform destroy -auto-approve
+```
+
+Remove the `.terraform` directory to free up disk space
+
+```shell
+rm -rf .terraform
 ```
 
 # Congrats! 

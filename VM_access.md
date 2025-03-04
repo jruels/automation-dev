@@ -4,7 +4,7 @@
 | Derek Bloom          | WNS2022-104  | TEKwns2022!              |                                        |
 | Daniel Dunn          | WNS2022-86  | TEKwns2022!              |                                        |
 | Arthur Edmiston      | WNS2022-87  | TEKwns2022!              |                                        |
-| Devon Green          | WNS2022-88  | TEKwns2022!              |                                        |
+| Devon Green          | WNS2022-105  | TEKwns2022!              |                                        |
 | Marais Lombard       | WNS2022-89  | TEKwns2022!              |                                        |
 | Thresi Louis         | WNS2022-90  | TEKwns2022!              |                                        |
 | Carilyn McCall       | WNS2022-91  | TEKwns2022!              |                                        |

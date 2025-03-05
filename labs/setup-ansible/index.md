@@ -31,7 +31,7 @@ sudo useradd ansible
 
 
 
-
+## Create an SSH key on the Control Node   
 Configure the `ansible` user on the control node for ssh shared key access to the managed nodes.
 
 **Note:** Do not use a passphrase for the key pair.
@@ -54,7 +54,7 @@ cat /home/ansible/.ssh/id_rsa.pub
 ```
 
 
-
+## On all the managed nodes
 Log in to each of the managed nodes, become the `ansible` user, and add the key to the `authorized_keys` file.
 
 
@@ -90,7 +90,7 @@ ssh <IP of each node from the spreadsheet>
 
 
 
-## Create a Simple Ansible Inventory
+## On the Controller create a simple Ansible inventory
 
 Create and enter a working directory
 
@@ -110,7 +110,7 @@ echo "node2 ansible_host=<IP of node2 from spreadsheet>" >> inventory
 
 
 
-## Configure `sudo` Access for Ansible
+## Configure `sudo` Access for Ansible on all the managed nodes
 
 Now, we'll configure sudo access for Ansible on `node1` and `node2` such that Ansible may use sudo for any command with no password prompt.
 

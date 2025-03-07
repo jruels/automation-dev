@@ -19,13 +19,52 @@ Generate Personal Access Token to authenticate from Ansible to GitHub.
 1. In a browser visit: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 2. Log in to GitHub if prompted
 3. Click "Generate new token"
-  1. Name token
-  2. Select "repo" and "delete_repo" scopes
-4. At the bottom of page click "Generate token"
-Make sure you save your token because it will not be shown again.
+4. Choose "Generate new token (classic)"
+  5. Name token
+  6. Select "repo" and "delete_repo" scopes
+7. At the bottom of page, click "Generate token"
+  Make sure you save your token because it will not be shown again.
+
+
+
+## Secure the Token with Ansible Vault
+
+Before proceeding, we need to secure the GitHub token using **Ansible Vault**.
+
+1. Create a new Ansible Vault file:
+
+   ```
+   ansible-vault create vault.yml
+   ```
+
+   This will open an editor where you can enter your encrypted variables.
+
+2. Add the following content to `vault.yml`:
+
+   ```
+   github_token: YOUR_GITHUB_TOKEN_HERE
+   ```
+
+   Replace `YOUR_GITHUB_TOKEN_HERE` with your actual GitHub token.
+
+3. Save and exit. The file is now encrypted.
+
+To edit the vault file later, use:
+
+```
+ansible-vault edit vault.yml
+```
+
+To view its contents:
+
+```
+ansible-vault view vault.yml
+```
+
 
 
 ## Create a custom module 
+
 Writing an Ansible module is not difficult. Modules can be written in any language, but for this lab we will use Python. 
 
 We'll create a quick little module that can create or delete a repository on github.
@@ -38,7 +77,7 @@ Create the following directory / file structure:
 ```
 play.yml
 [library]
-  |_ github_repo.py
+  |- github_repo.py
 ```
 
 The custom module lives in the `library` directory and has the name we will be calling from our playbook `github_repo`. 
@@ -150,21 +189,27 @@ def main():
 
 The above code accepts and pipes the parsed inputs `module.params` to `exit_json`.
 
-Update the playbook with some more fields:
+Update the playbook to use the vault encrypted key, and add more fields.
 
 ```yml
-- name: Create a github Repo
-  github_repo:
-    github_auth_key: "..."
-    username: "YOUR GITHUB USERNAME HERE"
-    name: "Hello-World"
-    description: "This is your first repository"
-    private: yes
-    has_issues: no
-    has_wiki: no
-    has_downloads: no
-    state: present
-    register: result
+- hosts: localhost
+  vars_files:
+    - vault.yml
+  tasks:
+    - name: Create a github Repo
+      github_repo:
+        github_auth_key: "{{ github_token }}"
+          username: "YOUR GITHUB USERNAME HERE"
+          name: "Hello-World"
+          description: "This is your first repository"
+          private: yes
+          has_issues: no
+          has_wiki: no
+          has_downloads: no
+         state: present
+      register: result
+    - debug: var=result
+    
 ```
 
 Run the playbook and it will display a dictionary of inputs passed in. 
@@ -319,8 +364,8 @@ Here is a sample of what that might look like:
 
 ```yml
 - hosts: localhost
-  vars:
-    - github_token: "YOUR TOKEN HERE"
+  vars_files:
+    - vault.yml
   tasks:
     - name: Create a GitHub Repo
       github_repo:
@@ -338,6 +383,12 @@ Here is a sample of what that might look like:
 
 Run the playbook and confirm it created the `Hello-World` repository. 
 
+```
+ansible-playbook play.yml --ask-vault-pass
+```
+
+
+
 Update the playbook with the following task to delete the repository. Remember to add tags so you can choose which task to run.
 
 ```yml
@@ -349,9 +400,12 @@ Update the playbook with the following task to delete the repository. Remember t
         state: absent
 ```
 
-The above playbook declares the `github_token` variable in plain text. This is not secure, and should be avoided. 
+Rerun the playbook to delete the repository (using the correct tag)
 
-Use `ansible-vault` to create an encrypted variable for `github_token`, and update the playbook to use it. 
+### Challenge
+
+Now that you've run the playbook using the `--ask-vault-pass` option, create a file that contains the decryption password and run the playbook using that. 
 
 ## Congrats 
 
+You have successfully created an Ansible module using Python. This is a straightforward example that can be adapted for various needs.

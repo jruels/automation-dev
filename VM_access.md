@@ -1,22 +1,22 @@
-| Name                 | Username    | Virtual Machine Password | Virtual Machine Portal                  |
-|----------------------|-------------|--------------------------|----------------------------------------|
-| Mohammad Azad        | WNS2022-85  | TEKwns2022!              | https://my.ablazedesktop.com |
-| Derek Bloom          | WNS2022-104  | TEKwns2022!              |                                        |
-| Daniel Dunn          | WNS2022-86  | TEKwns2022!              |                                        |
-| Arthur Edmiston      | WNS2022-87  | TEKwns2022!              |                                        |
-| Devon Green          | WNS2022-105  | TEKwns2022!              |                                        |
-| Marais Lombard       | WNS2022-89  | TEKwns2022!              |                                        |
-| Thresi Louis         | WNS2022-90  | TEKwns2022!              |                                        |
-| Carilyn McCall       | WNS2022-91  | TEKwns2022!              |                                        |
-| Wayne McClellan      | WNS2022-92  | TEKwns2022!              |                                        |
-| Andy Nadarewistsch   | WNS2022-93  | TEKwns2022!              |                                        |
-| Mani Nagarajan       | WNS2022-94  | TEKwns2022!              |                                        |
-| Chintal Patel        | WNS2022-95  | TEKwns2022!              |                                        |
-| Greg Peterson        | WNS2022-96  | TEKwns2022!              |                                        |
-| Rashed Rab           | WNS2022-97  | TEKwns2022!              |                                        |
-| Amit Rajput          | WNS2022-98  | TEKwns2022!              |                                        |
-| Zekeyahi Scott       | WNS2022-99  | TEKwns2022!              |                                        |
-| Soc Tatunay          | WNS2022-100 | TEKwns2022!              |                                        |
-| Trevor Baker         | WNS2022-101 | TEKwns2022!              |                                        |
-| Derek VanCaneghem    | WNS2022-102 | TEKwns2022!              |                                        |
-| Salman Shakil        | WNS2022-103 | TEKwns2022!              |                                        |
+| Name                   | Username    | Virtual Machine Password | Virtual Machine Portal       |
+|------------------------|------------|--------------------------|------------------------------|
+| Arman Avetisyan       | WNS2022-01  | TEKwns2022!              | https://my.ablazedesktop.com |
+| Chris Berry           | WNS2022-02  | TEKwns2022!              |                              |
+| David Canaday         | WNS2022-03  | TEKwns2022!              |                              |
+| Russell Celestin      | WNS2022-04  | TEKwns2022!              |                              |
+| Pramod Chenemilla     | WNS2022-05  | TEKwns2022!              |                              |
+| Shridhar Dave         | WNS2022-06  | TEKwns2022!              |                              |
+| James Dell            | WNS2022-07  | TEKwns2022!              |                              |
+| Kenneth Goulet        | WNS2022-08  | TEKwns2022!              |                              |
+| Jordan Granados       | WNS2022-09  | TEKwns2022!              |                              |
+| Andrew Garlick        | WNS2022-10  | TEKwns2022!              |                              |
+| Murugan Gnanasekaran  | WNS2022-11  | TEKwns2022!              |                              |
+| Valbona Hima         | WNS2022-12  | TEKwns2022!              |                              |
+| Bryan King           | WNS2022-13  | TEKwns2022!              |                              |
+| Kishor Kulkarni      | WNS2022-14  | TEKwns2022!              |                              |
+| Andrew Mueller       | WNS2022-15  | TEKwns2022!              |                              |
+| Ranganatha Ramineni  | WNS2022-16  | TEKwns2022!              |                              |
+| Balaji Raghavan      | WNS2022-17  | TEKwns2022!              |                              |
+| Ryan Restino         | WNS2022-18  | TEKwns2022!              |                              |
+| Giri Valluru        | WNS2022-19  | TEKwns2022!              |                              |
+| John Walker          | WNS2022-20  | TEKwns2022!              |                              |

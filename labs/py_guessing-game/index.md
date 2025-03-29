@@ -1,7 +1,7 @@
 # Python guessing game
 Let's develop a game! 
 
-In this lab you will use the things we've learned so far to develop a simple guessing game.
+In this lab, you will use the things we've learned so far to develop a simple guessing game.
 
 Objectives: 
 

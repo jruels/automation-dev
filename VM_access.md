@@ -1,6 +1,6 @@
 | Name                   | Username    | Virtual Machine Password | Virtual Machine Portal       |
 |------------------------|------------|--------------------------|------------------------------|
-| Arman Avetisyan       | WNS2022-01  | TEKwns2022!              | https://my.ablazedesktop.com |
+| Arman Avetisyan       | WNS2022-01  | TEKwns2022!              | [Ablaze Portal](https://my.ablazedesktop.com) |
 | Chris Berry           | WNS2022-02  | TEKwns2022!              |                              |
 | David Canaday         | WNS2022-03  | TEKwns2022!              |                              |
 | Russell Celestin      | WNS2022-04  | TEKwns2022!              |                              |

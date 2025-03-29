@@ -55,7 +55,9 @@ Always run VS Code in **Administrator mode** whenever you need to use Chocolatey
    * Terraform
    * Ansible
    * Python
-2. Install each extension. NOTE: There are multiple **Terraform** extensions. Install the one by **HashiCorp**.
+2. Install each extension. 
+
+NOTE: There are multiple **Terraform** extensions. Install the one by **HashiCorp**.
 
 ---
 
@@ -104,4 +106,4 @@ Always run VS Code in **Administrator mode** whenever you need to use Chocolatey
 
 ## Congratulations
 
-Congratulations, you've successfully configured your environment for working with AWS and Terraform.
+Congratulations, you've successfully configured your machine.

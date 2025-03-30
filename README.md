@@ -11,7 +11,6 @@ This site includes the labs for the Automation Developer class.
 
 ### Day 1
 Lab 1: [Setup VM](labs/setup.md)   
-
 Lab 2: [Python guessing game](labs/py_guessing-game)    
 Lab 3: [Using Python to interact with APIs](labs/py-apis)      
 

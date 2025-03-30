@@ -14,7 +14,7 @@
 ### **Step 2: Open the Integrated Terminal**
 
 1. In VS Code, click on the **Terminal** menu at the top and select **New Terminal**.
-   - Alternatively, use the shortcut: `Ctrl + ~` (Windows/Linux) or `Cmd + ~` (Mac).
+   - Alternatively, use the shortcut: `Ctrl + ~`.
 2. Ensure the terminal is using **PowerShell**, as Chocolatey requires it.
 
 ---
@@ -45,7 +45,7 @@ Always run VS Code in **Administrator mode** whenever you need to use Chocolatey
 ### **Step 2: Open the Extensions View**
 
 1. In VS Code, click on the **Extensions** icon on the left-hand sidebar. 
-   - Alternatively, press `Ctrl + Shift + X` (Windows/Linux) or `Cmd + Shift + X` (Mac) to open the Extensions view.
+   - Alternatively, press `Ctrl + Shift + X` to open the Extensions view.
 
 ---
 

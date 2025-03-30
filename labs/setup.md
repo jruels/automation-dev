@@ -59,6 +59,10 @@ Always run VS Code in **Administrator mode** whenever you need to use Chocolatey
 
 NOTE: There are multiple **Terraform** extensions. Install the one by **HashiCorp**.
 
+## Restart Visual Studio Code
+
+Restart VS Code to update the path to see the newly installed applications.
+
 ---
 
 # Open the lab repo in VS Code
@@ -69,7 +73,7 @@ NOTE: There are multiple **Terraform** extensions. Install the one by **HashiCor
 2. In the Visual Studio Code sidebar, click the third icon down “Source Control”
 3. Click “Clone repository” and enter the `https://github.com/jruels/automation-dev`
 4. In the File Explorer window that pops up, create a new folder “repos” and select it.
-5. After the repository is done cloning, in Visual Studio Code, click the “Explorer” icon at the top of the left sidebar.
+5. After cloning the repository, in Visual Studio Code, click the “Explorer” icon at the top of the left sidebar.
 
 # Configure AWS credentials
 

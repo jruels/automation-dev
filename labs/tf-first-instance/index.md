@@ -1,35 +1,32 @@
 # Create your first Terraform resource
 
-# Overview
-This lab walks through setting up Terraform and creating your first resources. 
+## Overview
 
-## Install Terraform 
-Create and enter the working directory:
-```sh
-mkdir -p $HOME/$(date +%Y%m%d)/terraform
-cd $_
-```
-The AWS CloudShell does not have Terraform installed. To install the latest version run the following: 
-```sh
-TER_VER=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`
-wget https://releases.hashicorp.com/terraform/${TER_VER}/terraform_${TER_VER}_linux_amd64.zip
-unzip terraform_${TER_VER}_linux_amd64.zip && mkdir -p $HOME/.local/bin && mv terraform $HOME/.local/bin
-```
+This lab walks through setting up Terraform and creating your first resources using Visual Studio Code's graphical interface wherever possible.
 
-Confirm installation was successful
-```sh
-terraform version 
-```
+## Setup
 
-## Create Terraform configuration
-Create a directory for the lab 1 files:
-```sh
-mkdir tf-lab1
-cd $_
-```
-Terraform loads all files in the working directory that end in `.tf`.
+These instructions assume that you are using Visual Studio Code and prefer using the GUI for tasks where applicable.
 
-Create a `main.tf` file with the following: 
+### Create a Working Directory
+
+1. Open **Visual Studio Code**.
+2. Click on **File** > **Open Folder...** and create a new folder named with today's date (e.g., `20240329`) under your home directory.
+3. Inside the opened folder, right-click in the **Explorer** pane and choose **New Folder**.
+4. Name the new folder `terraform` and double-click to enter it.
+
+## Create Terraform Configuration
+
+### Create the Lab Directory
+
+1. Right-click inside the **Explorer** pane again and select **New Folder**.
+2. Name this folder `tf-lab1` and enter it.
+
+### Create the `main.tf` File
+
+1. Right-click inside `tf-lab1`, select **New File**, and name it `main.tf`.
+2. Open `main.tf` and paste the following Terraform configuration:
+
 ```hcl
 terraform {
   required_providers {
@@ -44,7 +41,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "lab1-tf-example" {
-  ami           = "ami-0d5ae304a0b933620"
+  ami           = "ami-06e4ca05d431835e9"
   instance_type = "t2.micro"
 
   tags = {
@@ -53,120 +50,58 @@ resource "aws_instance" "lab1-tf-example" {
 }
 ```
 
-This is a complete configuration that Terraform is ready to apply. In the following sections we'll review each block of the configuration in more detail.
+This configuration is ready to be applied. We'll review each section in detail below.
 
-## Providers 
-Each Terraform module must declare which providers it requires, so that Terraform can install and use them. Provider requirements are declared in a `required_providers` block.
+## Providers
 
-A provider requirement consists of a local name, a source location, and a version constraint:
-The `provider` block configured the named provider, which in our case is `aws`. The provider is responsible for understanding the API and translating the Terraform configuration so it works with the vendor's API. Because Terraform has many providers you can represent almost any infrastructure type as a `resource` in Terraform.
+Each Terraform module must declare required providers so that Terraform can install and use them. The `provider` block configures Terraform to use the AWS provider.
 
-You can optional specify a `profile` attribute in your provider block. This attribute refers to credentials stored in your AWS Configuration. 
+### Security Note
 
-**NOTE:** You should NEVER hard-code credentials into your `*.tf` files. 
+**Never hard-code credentials** into `*.tf` files. Instead, use stored AWS credentials configured in your AWS CLI or environment variables.
 
-## Resources 
-The `resource` block defines infrastructure you want to create. This resource can be can be a physical component like an EC2 instance, GCP VM, or VMware machine, or it can be logical like a Heroku application. 
+## Initialize the Directory
 
-Our resource block has two strings before the block: a resource type, and resource name. 
-In the above example, the type is `aws_instance` and the name is `lab1-tf-example`. This prefix of type maps to the provider. The `aws_instance` type tells Terraform it is managed by the `aws` provider.
+1. In **Visual Studio Code**, right-click on the `tf-lab1` folder in the **Explorer** pane.
+2. Select **Open in Integrated Terminal** to ensure that all Terraform commands run in the correct directory.
+3. Run the following command to initialize Terraform and download the required providers:
+   ```sh
+   terraform init
+   ```
+4. You should see Terraform downloading the necessary plugins and initializing the environment.
 
-We provide configuration data for our resource inside the resource block. These arguments are for things like machine size, image, VPC IDs, ssh username etc. 
+## Format and Validate Configuration
 
-## Initialize the directory
-Now that we have our configuration file created run `terraform init` to download the providers used in our configuration.
+1. Run the following in the terminal 
+   1. terraform format
+   2. terraform validate
 
-Terraform uses a plugin-based architecture to support hundreds of infrastructure and service providers. Subsequent commands will use local settings and data during initialization.
+## Create Infrastructure
 
-Output will be similar to: 
-```
-Initializing the backend...
+1. Open **Command Palette** and type **Terraform: Plan**, then select it.
+   - Review the planned changes before applying them.
+2. Apply the configuration:
+   - In the terminal, type:
+     ```sh
+     terraform apply
+     ```
+   - Terraform will prompt for confirmation. Type **yes** when prompted.
 
-Initializing provider plugins...
-- Finding latest version of hashicorp/aws...
-- Installing hashicorp/aws v3.34.0...
-- Installed hashicorp/aws v3.34.0 (signed by HashiCorp)
+Terraform will create an AWS EC2 instance as specified in your configuration.
 
-Terraform has created a lock file .terraform.lock.hcl to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.
+## Cleanup
 
-Terraform has been successfully initialized!
+To delete the resources created:
 
-You may now begin working with Terraform. Try running "terraform plan" to see
-any changes that are required for your infrastructure. All Terraform commands
-should now work.
+1. Destroy the instance:
+   - In the terminal, type:
+     ```
+     terraform destroy
+     ```
+   - Terraform will prompt for confirmation. Type **yes** when prompted.
 
-If you ever set or change modules or backend configuration for Terraform,
-rerun this command to reinitialize your working directory. If you forget, other
-commands will detect it and remind you to do so if necessary.
-```
+## Congratulations!
 
-Terraform downloads the `aws` provider and installs it in a hidden subdirectory of the current working directory. The output shows which version of the plugin was installed.
-
-Confirm the plugin was downloaded: 
-```sh
-sudo yum install -y tree 
-tree .terraform/
-```
-
-You should see output like: 
-```
-.terraform/
-└── providers
-    └── registry.terraform.io
-        └── hashicorp
-            └── aws
-                └── 3.34.0
-                    └── linux_amd64
-                        └── terraform-provider-aws_v3.34.0_x5
-```
-
-As you can see above Terraform download the aws provider from the official Hashicorp registry. 
-
-## Format and validate configuration 
-Terraform includes a `fmt` argument to ensure consistent formatting in files and modules written by different teams. It automatically updates configurations for easy readability and consistency. 
-
-The `main.tf` file created is very basic, and is already formatted. 
-```sh
-terraform fmt 
-```
-
-If there were any formatting issues, like equal signs not aligned or wrong indentation `fmt` will fix them.
-
-If any files are formatted Terraform will output the name of the file. If there are not formatting changes there is not output.
-
-Now use the built-in `terraform validate` command to check and report any errors in modules, attribute names, and value types.
-
-## Create infrastructure 
-Now that the provider is downloaded, configuration files are formatted and validated it's time to create the infrastructure. 
-
-Run `terraform plan` to review the changes Terraform will make. 
-
-This output shows the execution plan, describing which actions Terraform will take in order to change real infrastructure to match the configuration.
-
-Run `terraform apply`
-
-The output has a + next to `aws_instance.lab1-tf-example`, meaning that Terraform will create this resource. Beneath that, it shows the attributes that will be set. When the value displayed is (known after apply), it means that the value won't be known until the resource is created.
-
-Terraform will now pause and wait for your approval before proceeding. If anything in the plan seems incorrect or dangerous, it is safe to abort here with no changes made to your infrastructure.
-
-In this case the plan is acceptable, so type `yes` at the confirmation prompt to proceed. Executing the plan will take a few minutes since Terraform waits for the EC2 instance to become available.
+You've successfully created and destroyed your first Terraform-managed infrastructure using Visual Studio Code's graphical interface where possible!
 
 
-
-
-# Cleanup
-Destroy the infrastructure you created 
-```sh
-terraform destroy -auto-approve
-```
-
-Remove the `.terraform` directory to free up disk space
-
-```shell
-rm -rf .terraform
-```
-
-# Congrats! 

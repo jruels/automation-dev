@@ -3,7 +3,7 @@
 This site includes the labs for the Automation Developer class.
 
 ## Labs
-[Lab environment details](https://docs.google.com/spreadsheets/d/1gTV6btPeIyyXylRkDn2_LNbWkf9BGU6wsi5eIb-ynLY/edit?usp=sharing)
+<!-- [Lab environment details](https://docs.google.com/spreadsheets/d/1gTV6btPeIyyXylRkDn2_LNbWkf9BGU6wsi5eIb-ynLY/edit?usp=sharing) -->
 
 [Windows VM information](VM_access.md)
 
@@ -14,7 +14,7 @@ Lab 1: [Setup VM](labs/setup.md)
 Lab 2: [Python guessing game](labs/py_guessing-game)    
 Lab 3: [Using Python to interact with APIs](labs/py-apis)      
 
-### Day 2
+<!-- ### Day 2
 Lab 4: [Terraform - Create an instance](labs/tf-first-instance)    
 Lab 5: [Variables and output](labs/tf-variables-and-output)   
 Lab 6: [Multi resource deployment](labs/tf-more-variables)   
@@ -41,4 +41,4 @@ Lab 17: [Install Ansible Tower](labs/install-aap/)
 Lab 18: [Ansible roles](labs/roles/)   
 Lab 19: [AAP inventory and credentials](labs/aap-inventory-creds-ad-hoc/)   
 Lab 20: [AAP projects and jobs](labs/aap-projects-templates-jobs/)   
-Lab 21: [Write an Ansible module](labs/gh_module/)   
+Lab 21: [Write an Ansible module](labs/gh_module/)    -->

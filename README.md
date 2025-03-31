@@ -3,9 +3,8 @@
 This site includes the labs for the Automation Developer class.
 
 ## Labs
-<!-- [Lab environment details](https://docs.google.com/spreadsheets/d/1gTV6btPeIyyXylRkDn2_LNbWkf9BGU6wsi5eIb-ynLY/edit?usp=sharing) -->
-
-[Windows VM information](VM_access.md)
+[Windows VM information](VM_access.md)   
+[Lab environment details](https://docs.google.com/spreadsheets/d/1gTV6btPeIyyXylRkDn2_LNbWkf9BGU6wsi5eIb-ynLY/edit?usp=sharing)   
 
 
 

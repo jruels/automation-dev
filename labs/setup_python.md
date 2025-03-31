@@ -36,5 +36,6 @@ In this lab, you will download and install Python on a Windows machine using the
 2. Open the **Integrated Terminal** in VS Code:
 3. Run the following command to confirm Python is installed and available in your system's PATH:
 
-   ```sh
+```
    python --version
+```

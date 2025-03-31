@@ -26,13 +26,6 @@
 
 **Install Required Packages**  
 
-1. In the new terminal type: 
-
-   ```bash
-   # After activating virtual environment
-   python -m pip install requests aiohttp
-   ```
-
 **Note: Always make sure your virtual environment is activated (you'll see `(venv)` in your prompt) when installing packages or running your code.**
 
 ### How to Run Any Example in this Guide
@@ -46,15 +39,23 @@
    source venv/bin/activate
    # For Windows/PowerShell:
    venv\Scripts\activate
+ 
+2. In the new terminal type: 
+
+   ```bash
+   # After activating virtual environment
+   python -m pip install requests aiohttp
    ```
+
+  ```
    
-2. **Create a Python file**
+3. **Create a Python file**
    
    1. Make sure you are in the `.venv` folder and create a new file. You can name it whatever you want (e.g `get.py`)
    
-3. **Copy the example code (from below)** into your .py file
+4. **Copy the example code (from below)** into your .py file
 
-4. **Run the code**
+5. **Run the code**
    
    ```bash
    python example.py

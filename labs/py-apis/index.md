@@ -2,6 +2,7 @@
 
 ### Prerequisites:
 1. **Verify Installation**  
+
    ```bash
    # Check Python version
    python --version
@@ -11,37 +12,28 @@
    ```
 
 2. **Create and Activate Virtual Environment**  
-   ```bash
-   # Create a new directory for your project
-   mkdir python-api-lab
-   cd python-api-lab
    
-   # Create virtual environment
-   python -m venv venv
-   
-   # Activate virtual environment
-   # For macOS/Linux:
-   source venv/bin/activate
-   # For Windows:
-   venv\Scripts\activate
-   
-   # Your prompt should now show (venv) at the beginning
-   ```
+   1. Open **Visual Studio Code**.
+   2. Click **File > Open Folder**.
+   3. Choose a location and click **New Folder**.
+   4. Name the folder `python-api-lab` and click **Open**.
+   5. In VS Code, press `Ctrl + Shift + P` (**Command Palette**).
+   6. Type `Python: Create Environment`, select it.
+   7. Choose `Venv`.
+   8. Select `Use Current Workspace Folder`.
+   9. A `.venv` folder appears when finished.
+   10. Right click the `.venv` folder and click **Open in Integrated Terminal**
 
-3. **Install Required Packages**  
+**Install Required Packages**  
+
+1. In the new terminal type: 
+
    ```bash
    # After activating virtual environment
-   python -m pip install requests
-   python -m pip install aiohttp
+   python -m pip install requests aiohttp
    ```
 
-4. **When You're Done**  
-   ```bash
-   # Deactivate virtual environment
-   deactivate
-   ```
-
-Note: Always make sure your virtual environment is activated (you'll see `(venv)` in your prompt) when installing packages or running your code.
+**Note: Always make sure your virtual environment is activated (you'll see `(venv)` in your prompt) when installing packages or running your code.**
 
 ### How to Run Any Example in this Guide
 
@@ -49,19 +41,21 @@ Note: Always make sure your virtual environment is activated (you'll see `(venv)
    ```bash
    # You should see (venv) at the start of your prompt
    # If not, activate it:
+   # Activate virtual environment
+   # For macOS/Linux/Bash:
    source venv/bin/activate
+   # For Windows/PowerShell:
+   venv\Scripts\activate
    ```
-
+   
 2. **Create a Python file**
-   ```bash
-   # Create and open a new .py file
-   touch example.py
-   code example.py   # or use your preferred editor
-   ```
-
-3. **Copy the example code** into your .py file
+   
+   1. Make sure you are in the `.venv` folder and create a new file. You can name it whatever you want (e.g `get.py`)
+   
+3. **Copy the example code (from below)** into your .py file
 
 4. **Run the code**
+   
    ```bash
    python example.py
    ```

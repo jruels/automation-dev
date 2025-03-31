@@ -15,7 +15,7 @@
 | Bryan King           | WNS2022-13  | TEKwns2022!              |                              |
 | Kishor Kulkarni      | WNS2022-14  | TEKwns2022!              |                              |
 | Andrew Mueller       | WNS2022-15  | TEKwns2022!              |                              |
-| Ranganatha Ramineni  | WNS2022-16  | TEKwns2022!              |                              |
+| David Venus          | WNS2022-16  | TEKwns2022!              |                              |
 | Jai Singh            | WNS2022-17  | TEKwns2022!              |                              |
 | Ryan Restino         | WNS2022-18  | TEKwns2022!              |                              |
 | Giri Valluru        | WNS2022-19  | TEKwns2022!              |                              |

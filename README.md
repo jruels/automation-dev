@@ -10,8 +10,9 @@ This site includes the labs for the Automation Developer class.
 
 ### Day 1
 Lab 1: [Setup VM](labs/setup.md)   
-Lab 2: [Python guessing game](labs/py_guessing-game)    
-Lab 3: [Using Python to interact with APIs](labs/py-apis)      
+Lab 2: [Install Python](labs/setup_python.md)   
+Lab 3: [Python guessing game](labs/py_guessing-game)    
+Lab 4: [Using Python to interact with APIs](labs/py-apis)      
 
 <!-- ### Day 2
 Lab 4: [Terraform - Create an instance](labs/tf-first-instance)    

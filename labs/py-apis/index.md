@@ -31,6 +31,7 @@
 ### How to Run Any Example in this Guide
 
 1. **Make sure your virtual environment is activated**
+
    ```bash
    # You should see (venv) at the start of your prompt
    # If not, activate it:
@@ -39,6 +40,7 @@
    source venv/bin/activate
    # For Windows/PowerShell:
    venv\Scripts\activate
+   ```
  
 2. In the new terminal type: 
 
@@ -47,7 +49,6 @@
    python -m pip install requests aiohttp
    ```
 
-  ```
    
 3. **Create a Python file**
    
@@ -294,6 +295,8 @@ Learn how to test different authentication methods using both Postman and Python
 
 #### Basic Authentication
 **Postman:**
+Install Postman from [here](https://dl.pstmn.io/download/latest/win64)
+
 1. Create a new request to `https://httpbin.org/basic-auth/user/pass`
 2. Under the "Authorization" tab, select "Basic Auth"
 3. Enter:

@@ -2,16 +2,16 @@
 
 ## Overview
 
-This lab walks through setting up Terraform and creating your first resources using Visual Studio Code's graphical interface wherever possible.
+This lab walks through setting up Terraform and creating your first resources.
 
 ## Setup
 
-These instructions assume that you are using Visual Studio Code and prefer using the GUI for tasks where applicable.
+These instructions assume that you are using Visual Studio Code.
 
 ### Create a Working Directory
 
 1. Open **Visual Studio Code**.
-2. Click on **File** > **Open Folder...** and create a new folder named with today's date (e.g., `20240329`) under your home directory.
+2. Click on **File** > **Open Folder...** and create a new folder in your Documents folder named with today's date (e.g., 20240329).
 3. Inside the opened folder, right-click in the **Explorer** pane and choose **New Folder**.
 4. Name the new folder `terraform` and double-click to enter it.
 

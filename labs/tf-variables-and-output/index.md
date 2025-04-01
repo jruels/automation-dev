@@ -1,22 +1,25 @@
-# Terraform Variables
+# Terraform Variables&#x20;
 
-## Overview 
-In this lab you will update the existing `main.tf` file to use variables. 
+## Overview
 
-**NOTE: If you run out of disk space remove the `.terraform` directory from previous labs**
+In this lab, you will update the existing `main.tf` file to use variables.
 
-## Set the instance name with a variable
-Under our working directory create a `tf-lab2` directory and copy `main.tf` to our new directory: 
-```sh
-mkdir tf-lab2 
-cd $_
-cp ../tf-lab1/main.tf . 
-```
-The configuration in `main.tf` includes hard-coded values. Terraform variables allow you to write configuration that is easier to re-use and flexible. 
+## Set the Instance Name with a Variable
 
-Add a variable to define the instance name. 
+### Create the Lab Directory
 
-Create a new file called `variables.tf` with a block that defines a new `instance_name` variable. 
+1. In **Visual Studio Code**, open the working directory created in the previous lab (`YYYYMMDD/terraform`).
+2. Right-click in the **Explorer** pane and select **New Folder**.
+3. Name the folder `tf-lab2`.
+4. Copy `main.tf` from `tf-lab1` to `tf-lab2`:
+   - Right-click on `main.tf` in `tf-lab1` and select **Copy**.
+   - Navigate to `tf-lab2`, right-click inside the folder, and select **Paste**.
+
+### Define a Variable for the Instance Name
+
+1. Right-click inside `tf-lab2` and select **New File**.
+2. Name the file `variables.tf` and open it.
+3. Paste the following variable definition:
 
 ```hcl
 variable "instance_name" {
@@ -26,41 +29,55 @@ variable "instance_name" {
 }
 ```
 
-Now update the `main.tf` `aws_instance` resource block to use our new variable. 
+### Update `main.tf` to Use the Variable
 
-```
+1. Open `main.tf` in `tf-lab2`.
+2. Update the `aws_instance` resource block to use the new variable:
+
+```hcl
   tags = {
     Name = var.instance_name
   }
 ```
 
-We also need to update the resource name in `main.tf` to `lab2-tf-example`
-```
-..snip
+3. Rename the resource from `lab1-tf-example` to `lab2-tf-example`:
+
+```hcl
 resource "aws_instance" "lab2-tf-example" {
-  ami           = "ami-830c94e3"
-  ..snip
+ 
 }
 ```
-After updating the resource block to use the new variable apply the configuration 
 
-```sh
-terraform apply
-```
+## Apply the Configuration
 
-If everything looks good, respond with `yes` to the prompt.
+1. Open **Integrated Terminal** in `tf-lab2`.
 
-Now apply the configuration again, but pass the variable on the command-line. 
-```sh
-terraform apply -var 'instance_name=SomeOtherName'
-```
+2. Run the following command:
 
-Variables passed via the command-line will not be saved , so you need to repeatedly set them, or add them to a variables file.
+   ```sh
+   terraform apply
+   ```
+
+3. If everything looks correct, type `yes` to confirm and apply the configuration.
+
+4. Apply the configuration again, passing the variable via the command line:
+
+   ```sh
+   terraform apply -var 'instance_name=SomeOtherName'
+   ```
+
+### Note
+
+Variables passed via the command line are not saved, so they must be set each time unless added to a variable file.
 
 ## Query Data with Outputs
-In this lab you will use output values to organize data to be queried and shown back to the user. 
 
-Create a file called `outputs.tf` to output the instance's ID and Public IP address with the following: 
+### Define Output Values
+
+1. Right-click inside `tf-lab2` and select **New File**.
+2. Name the file `outputs.tf` and open it.
+3. Paste the following output definitions:
+
 ```hcl
 output "instance_id" {
   description    = "ID of the EC2 instance"
@@ -73,32 +90,31 @@ output "instance_private_ip" {
 }
 ```
 
-## Inspect output values
-You must apply the new configuration before you can use these output values. 
+### Inspect Output Values
 
-Apply the configuration using `terraform apply`
+1. Apply the configuration:
+   ```sh
+   terraform apply
+   ```
+2. Query the outputs:
+   ```sh
+   terraform output
+   ```
+3. Example output:
+   ```
+   instance_id = "i-0bf954919ed765de1"
+   instance_public_ip = "54.186.202.254"
+   ```
 
-Terraform now prints output values to the screen every time you apply your configuration. Query the outputs using the `terraform output` command. 
+Terraform outputs are useful for integrating with other infrastructure components or CI/CD pipelines.
 
-Output will be similar to: 
-```
-instance_id = "i-0bf954919ed765de1"
-instance_public_ip = "54.186.202.254"
-```
+## Cleanup
 
-You can use Terraform outputs to connect Terraform projects with other parts of your infrastructure or CICD pipelines. 
+1. Destroy the infrastructure:
+   ```sh
+   terraform destroy -auto-approve
+   ```
 
+## Congratulations!
 
-# Cleanup
-Destroy the infrastructure you created
-```sh
-terraform destroy -auto-approve
-```
-
-Remove the `.terraform` directory to free up disk space
-
-```shell
-rm -rf .terraform
-```
-
-# Congrats!
+You have successfully used Terraform variables and outputs.

@@ -73,8 +73,17 @@ Each Terraform module must declare required providers so that Terraform can inst
 ## Format and Validate Configuration
 
 1. Run the following in the terminal 
-   1. terraform format
-   2. terraform validate
+   ```hcl
+   terraform format
+   ```
+
+   * This command formats the file to meet HCL standards
+
+   ```hcl
+   terraform validate
+   ```
+
+   * This command runs syntax checks and confirms all variables are declared.
 
 ## Create Infrastructure
 
@@ -102,6 +111,5 @@ To delete the resources created:
 
 ## Congratulations!
 
-You've successfully created and destroyed your first Terraform-managed infrastructure using Visual Studio Code's graphical interface where possible!
-
+You've successfully created and destroyed your first Terraform-managed infrastructure.
 

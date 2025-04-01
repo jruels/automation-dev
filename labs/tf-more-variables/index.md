@@ -1,18 +1,18 @@
 # Deploy multiple resources
 
 ## Overview 
-In this lab, you will use Terraform to deploy a web application on AWS. The infrastructure will include a VPC, load balancer and EC2 instances. 
+In this lab, you will use Terraform to deploy a web application on AWS. The infrastructure will include a VPC, load balancer, and EC2 instances. 
 
-Input variables make Terraform configurations more flexible by defining values that can be set by users. You will parameterize this configuration with Terraform input variables. 
+Input variables make Terraform configurations more flexible by defining values that users can set. You will parameterize this configuration with Terraform input variables. 
 
 ## Setup lab files 
-Under our working directory create a `tf-lab3` directory:
-```sh
-mkdir tf-lab3 
-cd $_
-```
+### Create the Lab Directory
 
-In the new working directory clone the GitHub repository:
+1. In **Visual Studio Code**, open the working directory created in the previous lab (`YYYYMMDD/terraform`).
+2. Right-click in the **Explorer** pane and select **New Folder**.
+3. Name the folder `tf-lab3`.
+
+In the new `tf-lab3` folder, click **Open in Integrated Terminal** and run the following to clone the GitHub repository:
 
 ```sh
 git clone https://github.com/jruels/learn-terraform-variables.git
@@ -78,7 +78,7 @@ Add a declaration for the `vpc_cidr_block` variable to `variables.tf` with the f
 - variable name: `vpc_cidr_block`
 - description: `CIDR block for VPC`
 - type: `string`
-- default: `10.0.0.0/16`
+- default: `"10.0.0.0/16"`
 
 Now, replace the hard-coded value for the VPC's CIDR block with a variable in `main.tf`.
 
@@ -102,11 +102,5 @@ Once again the variables added have the same values as the original hard-coded v
 
 ## Cleanup
 Run `terraform destroy` to remove resources.
-
-Remove the `.terraform` directory to free up disk space
-
-```shell
-rm -rf .terraform
-```
 
 # Congrats

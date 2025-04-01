@@ -34,11 +34,11 @@ You also want to make sure and add the following to your ignore list. If you are
 
 ### Create Terraform configuration
 
-Create working directory
-```sh
-mkdir tf-lab5
-cd $_
-```
+1. In **Visual Studio Code**, open the working directory created in the previous lab (`YYYYMMDD/terraform`).
+2. Right-click in the **Explorer** pane and select **New Folder**.
+3. Name the folder `tf-lab5`.
+4. Right click `tf-lab5` and click **Open in Integrated Terminal**.
+
 Clone the GitHub repository.
 ```sh
 git clone https://github.com/jruels/learn-terraform-modules-create.git
@@ -53,10 +53,9 @@ Ensure that Terraform has downloaded all the necessary providers and modules by 
 
 In this lab, you will create a local submodule within your existing configuration that uses the s3 bucket resource from the AWS provider.
 
-Inside your existing configuration directory, create a directory called `modules`, with a directory called `aws-s3-static-website-bucket` inside of it. 
-```sh
-mkdir -p modules/aws-s3-static-website-bucket
-```
+Inside your `tf-lab5` folder, create a sub-folder called `modules`. In the new `modules` folder create a sub-folder named `aws-s3-static-website-bucket`. 
+
+
 
 After creating these directories, your configuration's directory structure will look like this:
 ```
@@ -75,7 +74,7 @@ Hosting a static website with S3 is a fairly common use case. While it isn't too
 
 You will work with three Terraform configuration files inside the `aws-s3-static-website-bucket` directory: `main.tf`, `variables.tf`, and `outputs.tf`.
 
-Add an S3 bucket resource to `main.tf` inside the `modules/aws-s3-static-website-bucket` directory:
+Inside the `modules/aws-s3-static-website-bucket` directory, create a `main.tf`  with the following: 
 
 ```hcl
 resource "aws_s3_bucket" "s3_bucket" {
@@ -173,13 +172,13 @@ Define the following variables in `variables.tf` inside the `modules/aws-s3-stat
 - default: `{}`
 
 
-When using a module, variables are set by passing arguments to the module in your configuration. You will set some of these variables when calling this module from your root module's `main.tf`.
+When using a module, variables are set by passing arguments to the module in your configuration. You will set values for some of these variables when calling this module from your root module's `main.tf`.
 
-When creating a module, consider which resource arguments to expose to module end users as input variables. For example, you might decide to expose the index and error documents to end users of this module as variables, but not define a variable to set the ACL , since to host a website your bucket will need the ACL to be set to "public-read".
+Consider which resource arguments to expose to module end users as input variables when creating a module. For example, you might choose to make the index and error documents available to end users of this module as variables, but refrain from defining a variable to set the ACL , since hosting a website requires your bucket to have the ACL set to "public-read. "
 
-You should also consider which values to add as outputs, since outputs are the only supported way for users to get information about resources configured by the module.
+You should also consider which values to add as outputs since outputs are the only way users can get information about resources configured by the module.
 
-Add outputs to your module in the `outputs.tf` file inside the `modules/aws-s3-static-website-bucket` directory:
+Inside the `modules/aws-s3-static-website-bucket` directory, add outputs to your module in the `outputs.tf` file :
 
 ## Output variable definitions
 
@@ -195,7 +194,7 @@ Add outputs to your module in the `outputs.tf` file inside the `modules/aws-s3-s
 - description: `Domain name of the bucket`
 - value: `aws_s3_bucket_website_configuration.s3_bucket.website_domain`
 
-Like variables, outputs in modules perform the same function as they do in the root module but are accessed in a different way. A module's outputs can be accessed as read-only attributes on the module object, which is available within the configuration that calls the module. You can reference these outputs in expressions as `module.<MODULE NAME>.<OUTPUT NAME>`.
+Like variables, outputs in modules perform the same function as they do in the root module but are accessed differently. A module's outputs can be accessed as read-only attributes on the module object, which is available within the configuration that calls the module. You can reference these outputs in expressions as `module.<MODULE NAME>.<OUTPUT NAME>`.
 
 Now that you have created your module, return to the `main.tf` in your root module and add a reference to the new module:
 
@@ -212,13 +211,13 @@ module "website_s3_bucket" {
 }
 ```
 
-AWS S3 Buckets must be globally unique. Because of this, you will need to replace `<UNIQUE BUCKET NAME>` with a unique, valid name for an S3 bucket. Using your name and the date is usually a good way to guess a unique bucket name. For example:
+AWS S3 Buckets must be globally unique. Because of this, you will need to **replace `<UNIQUE BUCKET NAME>`** with a unique, valid name for an S3 bucket. Using your name and the date is usually a good way to guess a unique bucket name. For example:
 
 ```hcl
   bucket_name = "jrs-example-2023-01-15"
 ```
 
-In this example, the `bucket_name` and `tags` arguments will be passed to the module, and provide values for the matching variables found in `modules/aws-s3-static-website-bucket/variables.tf`.
+In this example, the `bucket_name` and `tags` arguments will be passed to the module, and values will be provided for the matching variables found in `modules/aws-s3-static-website-bucket/variables.tf`.
 
 ## Define outputs
 Earlier, you added several outputs to the `aws-s3-static-website-bucket` module, making those values available to your root module configuration.
@@ -245,7 +244,7 @@ output "website_bucket_domain" {
 ```
 
 ## Install the local module
-Whenever you add a new module to a configuration, Terraform must install the module before it can be used. Both the `terraform get` and `terraform init` commands will install and update modules. The `terraform init` command will also initialize backends and install plugins.
+When you add a new module to a configuration, Terraform must install it before it can be used. Both the `terraform get` and `terraform init` commands will install and update modules. The `terraform init` command will also initialize backends and install plugins.
 
 ```sh
 terraform get
@@ -255,17 +254,11 @@ Now that your new module is installed and configured, run `terraform apply` to p
 
 
 ## Bonus
-Use the `aws s3` command to copy an index.html file to your bucket, and load it in a browser. 
+Use the `aws s3` command to copy an `index.html` file to your bucket, and load it in a browser. 
 
 
 ## Cleanup
 Now clean everything up by running `terraform destroy -auto-approve`
-
-Remove the `.terraform` directory to free up disk space
-
-```shell
-rm -rf .terraform
-```
 
 # Congrats! 
 You have now configured and used your own module to create a static website. 

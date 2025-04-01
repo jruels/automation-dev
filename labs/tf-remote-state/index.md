@@ -4,7 +4,7 @@ In this lab, you will create an S3 bucket and migrate the Terraform state to a r
 ## Create an S3 bucket 
 AWS requires every S3 bucket to have a unique name. For this reason, add your initials to the end of the bucket. The example below uses `jrs` as the initials.
 
-For the following steps replace all references to `remote-state-jrs` with your bucket name.
+For the following steps, replace all references to `remote-state-jrs` with your bucket name.
 
 In the `tf-lab3/learn-terraform-variables` directory create a new file `s3.tf` with the following: 
 
@@ -20,14 +20,14 @@ resource "aws_s3_bucket" "remote_state" {
 }
 ```
 
-So that we can easily retrieve the name of the bucket in the future add the following to `outputs.tf`
+So that we can easily retrieve the name of the bucket in the future, add the following to `outputs.tf`
 ```hcl
 output "s3_bucket" {
   description = "S3 bucket name"
   value       = aws_s3_bucket.remote_state.id
 }
 ```
-Using Terraform apply the changes. 
+Using Terraform, apply the changes. 
 
 ## Migrate the state
 Now that we've created an S3 bucket, we need to migrate the state to the remote backend. 
@@ -60,11 +60,7 @@ Run the following to clean up the resources
 terraform destroy -auto-approve
 ```
 
-Remove the `.terraform` directory to free up disk space
-
-```
-rm -rf .terraform
-```
+Remove the `.terraform` directory to avoid state errors in future labs.
 
 
 

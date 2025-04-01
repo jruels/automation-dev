@@ -6,11 +6,13 @@ In this lab, you will refactor a monolithic Terraform configuration into a modul
 You will provision two instances of a web application hosted in an S3 bucket that represent production and development environments. The configuration you use to deploy the application will start as a monolith. You will modify it to step through the common phases of evolution for a Terraform project, until each environment has its own independent configuration and state.
 
 ## Start with a monolith configuration
-Create a working directory
-```sh
-mkdir tf-refactor
-cd $_
-```
+### Create the Lab Directory
+
+1. In **Visual Studio Code**, open the working directory created in the previous lab (`YYYYMMDD/terraform`).
+2. Right-click in the **Explorer** pane and select **New Folder**.
+3. Name the folder `tf-refactor`.
+4. Open `tf-refactor` in the **Integrated Terminal**.
+
 Clone the GitHub repository.
 ```sh
 git clone https://github.com/jruels/learn-terraform-code-organization
@@ -211,243 +213,21 @@ After reorganizing your environments into directories, your file structure shoul
 
 
 ### Deploy environments 
-To deploy the `dev` environment change to the `dev` directory, initialize Terraform, and apply the configuration.
+To deploy the `dev` environment, change to the `dev` directory, initialize Terraform, and apply the configuration.
 
 You now have only one output from this deployment. Check your website endpoint in a browser.
 
 Repeat these steps for your production environment.
 
 
-After completing this lab you should have a `dev` and `prod` environment successfully deployed. 
+After completing this lab, you should have a `dev` and `prod` environment successfully deployed. 
 
-Now your development and production environments are in separate directories, each with their own configuration files and state.
+Your development and production environments are in separate directories, each with its configuration files and state.
 
 
 ### Cleanup
 ```sh
 terraform destroy
-```
-
-## Terraform workspaces
-Workspace-separated environments use the same Terraform code but have different state files, which is useful if you want your environments to stay as similar to each other as possible, for example if you are providing development infrastructure to a team that wants to simulate running in production.
-
-However, you must manage your workspaces in the CLI and be aware of the workspace you are working in to avoid accidentally performing operations on the wrong environment.
-
-### Update your Terraform directory
-Remove your environment directories with `rm -rf dev/ prod/`. Then, switch branches by running `git checkout file-separation`.
-
-All Terraform configurations start out in the `default` workspace. Type `terraform workspace list` to have Terraform print out the list of your workspaces with the currently selected one denoted by a `*`.
-
-You should see something like: 
-```sh
-$ terraform workspace list
-   * default
-```
-
-Before you create a new workspace, you need to update your configuration files so that both environments can use the same one. In your root directory, remove the `prod.tf` file.
-
-```sh
-rm prod.tf`
-```
-
-Update your variable input file to remove references to the individual environments.
-
-Remove the environment references in `variables.tf`
-```hcl
-variable "region" {
-  description = "This is the cloud hosting region where your webapp will be deployed."
-}
-
-- variable "dev_prefix" {
-+ variable "prefix" {
-  description = "This is the environment where your webapp is deployed. qa, prod, or dev"
-}
-
-- variable "prod_prefix" {
--   description = "This is the environment where your webapp is deployed. qa, prod, or dev"
-- }
-```
-
-Rename `dev.tf` to `main.tf`
-```sh
-mv dev.tf main.tf`
-```
-
-Open this file in your text editor and replace the "dev" resource IDs and variables with the function of the resource itself. You are creating a generic configuration file that can apply to multiple environments.
-
-```hcl
--resource "aws_s3_bucket" "dev" {
-+resource "aws_s3_bucket" "bucket" {
--  bucket = "${var.dev_prefix}-${random_pet.petname.id}"
-+  bucket = "${var.prefix}-${random_pet.petname.id}"
-
-   force_destroy = true
- }
-
--resource "aws_s3_bucket_website_configuration" "dev" {
-+resource "aws_s3_bucket_website_configuration" "bucket" {
--  bucket = aws_s3_bucket.dev.id
-+  bucket = aws_s3_bucket.bucket.id
-
-   index_document {
-     suffix = "index.html"
-   }
-
-   error_document {
-     key = "error.html"
-   }
- }
-
--resource "aws_s3_bucket_acl" "dev" {
-+resource "aws_s3_bucket_acl" "bucket" {
--  bucket = aws_s3_bucket.dev.id
-+  bucket = aws_s3_bucket.bucket.id
-
-  acl = "public-read"
-}
-
-- resource "aws_s3_bucket_policy" "dev" {
-+ resource "aws_s3_bucket_policy" "bucket" {
--   bucket = aws_s3_bucket.dev.id
-+   bucket = aws_s3_bucket.bucket.id
-
-   policy = <<EOF
- {
-     "Version": "2012-10-17",
-     "Statement": [
-         {
-             "Sid": "PublicReadGetObject",
-             "Effect": "Allow",
-             "Principal": "*",
-             "Action": [
-                 "s3:GetObject"
-             ],
-             "Resource": [
--                "arn:aws:s3:::${aws_s3_bucket.dev.id}/*"
-+                "arn:aws:s3:::${aws_s3_bucket.bucket.id}/*"
-             ]
-         }
-     ]
- }
- EOF
- }
-
--resource "aws_s3_object" "dev" {
-+resource "aws_s3_object" "webapp" {
-   acl          = "public-read"
-   key          = "index.html"
--  bucket       = aws_s3_bucket.dev.id
-+  bucket       = aws_s3_bucket.bucket.id
-   content      = file("${path.module}/assets/index.html")
-   content_type = "text/html"
- }
-```
-
-Using workspaces organizes the resources in your state file by environments, so you only need one output value definition. Open your `outputs.tf` file in your text editor and remove the `dev` environment reference in the output name. Change `dev` in the value to `bucket`.
-
-
-Finally, replace `terraform.tfvars` with a `prod.tfvars` file and a `dev.tfvars` file to define your variables for each environment.
-
-For your `dev` workspace, copy the `terraform.tfvars` file to a new `dev.tfvars` file, and change `prefix` to `dev`
-
-
-Create a new `.tfvars` file for your production environment variables by renaming the `terraform.tfvars` file to `prod.tfvars`, and updating `prefix` to `prod`.
-
-Now that you have a single `main.tf` file, initialize your directory to ensure your Terraform configuration is valid.
-
-
-
-### Create a `dev` workspace
-Create a new workspace in the Terraform CLI with the `workspace` command.
-
-```sh
-terraform workspace new dev
-```
-
-Terraform's output will confirm you created and switched to the workspace.
-```
-Created and switched to workspace "dev"!
-
-You're now on a new, empty workspace. Workspaces isolate their state,
-so if you run "terraform plan" Terraform will not see any existing state
-for this configuration.
-```
-
-Any previous state files from your `default` workspace are hidden from your `dev` workspace, but your directory and file structure do not change.
-
-Initialize the new workspace `terraform init`.
-
-Apply the configuration for your development environment in the new workspace, specifying the `dev.tfvars` file with the `-var-file` flag.
-
-Terraform will create three resources and prompt you to confirm that you want to perform these actions in the workspace "dev".
-
-Enter `yes` and check your website endpoint in a browser.
-
-### Create a prod workspace.
-
-```sh
-terraform workspace new prod
-```
-
-Terraform's output will confirm you created the workspace and are operating within that workspace.
-
-Any previous state files from your `dev` workspace are hidden from your `prod` workspace, but your directory and file structure do not change.
-
-
-You have a specific `prod.tfvars` file for your new workspace. Run `terraform apply` with the `-var-file` flag and reference the file. Enter `yes` when you are prompted to accept the changes and check your website endpoint in a browser.
-
-
-Your output now contains only resources labeled "production" and your single website endpoint is prefixed with `prod`.
-
-
-### State storage in workspaces    
-When you use the default workspace with the local backend, your `terraform.tfstate` file is stored in the root directory of your Terraform project. When you add additional workspaces your state location changes; Terraform internals manage and store state files in the directory `terraform.tfstate.d`.
-
-Your directory will look similar to the one below.
-
-```
-.
-├── README.md
-├── assets
-│   └── index.html
-├── dev.tfvars
-├── main.tf
-├── outputs.tf
-├── prod.tfvars
-├── terraform.tfstate.d
-│   ├── dev
-│   │   └── terraform.tfstate
-│   ├── prod
-│   │   └── terraform.tfstate
-├── terraform.tfvars
-└── variables.tf
-```
-
-
-### Destroy your workspace deployments
-
-To destroy your infrastructure in a multiple workspace deployment, you must select the intended workspace and run `terraform destroy -var-file=` with the `.tfvars` file that corresponds to your workspace.
-
-Destroy the infrastructure in your `prod` workspace, specifying the `prod.tfvars` file with the `-var-file` flag.
-
-When you are sure you are running your destroy command in the correct workspace, enter `yes` to confirm the destroy plan.
-
-Next, to destroy your development infrastructure, switch to your `dev` workspace using the select subcommand.
-
-```sh
-terraform workspace select dev
-```
-
-Run `terraform destroy` specifying `dev.tfvars` with the `-var-file` flag.
-
-```sh
-terraform destroy -var-file=dev.tfvars
-```
-
-Remove the `.terraform` directory to free up disk space
-
-```shell
-rm -rf .terraform
 ```
 
 ## Congrats!

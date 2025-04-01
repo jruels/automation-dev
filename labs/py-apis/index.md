@@ -35,11 +35,7 @@
    ```bash
    # You should see (venv) at the start of your prompt
    # If not, activate it:
-   # Activate virtual environment
-   # For macOS/Linux/Bash:
-   source venv/bin/activate
-   # For Windows/PowerShell:
-   venv\Scripts\activate
+   Scripts\activate
    ```
  
 2. In the new terminal type: 

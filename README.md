@@ -14,7 +14,7 @@ Lab 2: [Install Python](labs/setup_python.md)
 Lab 3: [Python guessing game](labs/py_guessing-game)    
 Lab 4: [Using Python to interact with APIs](labs/py-apis)      
 
-<!-- ### Day 2
+### Day 2
 Lab 4: [Terraform - Create an instance](labs/tf-first-instance)    
 Lab 5: [Variables and output](labs/tf-variables-and-output)   
 Lab 6: [Multi resource deployment](labs/tf-more-variables)   
@@ -23,7 +23,7 @@ Lab 8: [Write a module](labs/tf-write-module)
 Lab 9: [Refactor monolithic code](labs/tf-refactor)   
 
 
-### Day 3
+<!-- ### Day 3
 Lab 10: [Access Ansible VMs](labs/setup)    
 Lab 11: [Install Ansible](labs/setup-ansible)    
 Lab 12: [Ansible inventory](labs/inventory)    

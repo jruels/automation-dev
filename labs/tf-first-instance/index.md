@@ -74,7 +74,7 @@ Each Terraform module must declare required providers so that Terraform can inst
 
 1. Run the following in the terminal 
    ```hcl
-   terraform format
+   terraform fmt
    ```
 
    * This command formats the file to meet HCL standards

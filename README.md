@@ -24,7 +24,7 @@ Lab 10: [Refactor monolithic code](labs/tf-refactor)
 
 
 ### Day 3
-Lab 11: [Connect to Ansible Controller](labs/setup)    
+Lab 11: [Connect to Ansible Controller](labs/setup/index.md)    
 Lab 12: [Ansible inventory](labs/inventory)    
 Lab 13: [Ansible ad-hoc](labs/ad-hoc)    
 Lab 14: [Ansible playbook fundamentals](labs/playbook-fun)    

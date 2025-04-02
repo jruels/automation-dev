@@ -60,12 +60,8 @@ Save the changes to the SSH configuration file and close it.
 
 ### Create a working directory
 In Visual Studio Code, you can create a new folder or file as if it was on your local machine.
-Create a working directory for the labs on the Tower server. This will be used to store your lab files and scripts.
-```bash
-mkdir ~/labs
-cd ~/labs
-```
-
+Click **Open Folder** and select `/home/ansible`.
+In future labs, you will create a directory for each lab.
 
 ## Congratulations!
 You have successfully set up your lab environment and are ready to start working on the labs.

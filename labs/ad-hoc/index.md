@@ -6,27 +6,16 @@ Some consultants will be performing audits on a number of systems in our company
 
 
 
-## Get Logged In and Setup Inventory
-
-Log in to the server as `ec2-user` and sudo to the `ansible` user.
-```
-sudo su - ansible
-```
-
 ### Prerequisites
 
-Create and enter a working directory
+In VS Code, create a new lab directory named `lab-ad-hoc,` in the terminal run `cd ~/lab-ad-hoc`
+
+Inside the `lab-ad-hoc` folder, create an `inventory` file with the following:
 
 ```
-mkdir /home/ansible/lab-ad-hoc && cd /home/ansible/lab-ad-hoc
-```
-
-Run the following commands to add the database servers to  `/home/ansible/lab-ad-hoc/inventory`:
-
-```
-echo "[dbsystems]" >> inventory
-echo "db1 ansible_host=<IP of node1 from spreadsheet>" >> inventory 
-echo "db2 ansible_host=<IP of node2 from spreadsheet>" >> inventory 
+[dbsystems]
+db1 ansible_host=<IP of node1 from /home/ansible/inventory/inventory.yaml>
+db2 ansible_host=<IP of node2 from /home/ansible/inventory/inventory.yaml>
 ```
 
 
@@ -43,7 +32,9 @@ cp /home/ansible/automation-dev/labs/ad-hoc/files/userlist.txt /home/ansible/lab
 
 ## Create the User Accounts 
 
-If we read the `userlist.txt` file in our work directory, we'll see `consultant` and `supervisor`. Those are the two new user accounts we have to create:
+If we read the `userlist.txt` file in our work directory, we'll see `consultant` and `supervisor`. Those are the two new user accounts we have to create.
+
+Run the following commands to create those accounts.
 
 ```
 ansible -i inventory dbsystems -b -m user -a "name=consultant" 

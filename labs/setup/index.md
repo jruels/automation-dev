@@ -47,7 +47,7 @@ Add the following lines to the SSH configuration file, replacing `<VM IP from th
 Host tower
   HostName <IP of Tower server from the spreadsheet>
   IdentityFile <Path to the cloned lab directory/keys/lab.pem>
-  User ec2-user
+  User ansible
 ```
 
 ### Save the SSH configuration file.

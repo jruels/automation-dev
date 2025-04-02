@@ -1,6 +1,6 @@
 # Getting Started with Ansible
 
-In this hands-on lab, we'll install Ansible on a control node and configure two managed servers for use with Ansible. We will also create a simple inventory and run an Ansible command to verify our configuration is correct.
+In this hands-on lab, we'll install Ansible on a control node and configure two managed servers for use with Ansible. We will also set up VS Code for remotely editing files, create a simple inventory, and run an Ansible command to verify our configuration is correct.
 
 ## Log into the control node
 Log in to the control node as `ec2-user` 
@@ -36,7 +36,7 @@ Configure the `ansible` user on the control node for ssh shared key access to th
 
 **Note:** Do not use a passphrase for the key pair.
 
-Create a key pair for the `ansible` user on the control host, accepting the defaults when prompted:
+Create a key pair for the `ansible` user on the control host, hit ENTER to accept the defaults when prompted:
 
 ```
 sudo su - ansible

@@ -6,35 +6,28 @@ Our company has been increasing the deployment of small brochure-style websites 
 
 We must create an Ansible inventory containing a host group named `web`. The web group should contain `node1` and `node2`.
 
-Then we've got to design an Ansible playbook that will execute the following tasks on your configured inventory:
+Then, we've got to design an Ansible playbook that will execute the following tasks on your configured inventory:
 
 - Install `httpd`
 - Start and enable the `httpd` service
 - Install a simple website provided on a repository server.
 
-## Get Logged In
-
-Log in to the control server as `ec2-user` and sudo to the `ansible` user.
- ```
- sudo su - ansible
- ```
-
 ### Prerequisites
 
-Create and enter a working directory
+In VS Code, create a new lab directory named `lab-playbook-fun`  and `cd` to it in the terminal.
 
  ```
- mkdir /home/ansible/lab-playbook-fun && cd /home/ansible/lab-playbook-fun
+ cd /home/ansible/lab-playbook-fun
  ```
 
 ## Create an inventory 
 
-Create an inventory that contains a Host Group named `web` containing node1 and node2
+Create an `inventory` file that contains a Host Group named `web` containing node1 and node2
 
 ```
-echo "[web]" >> inventory 
-echo "node1 ansible_host=<IP of node1 from spreadsheet>" >> inventory 
-echo "node2 ansible_host=<IP of node2 from spreadsheet>" >> inventory 
+[web]
+node1 ansible_host=<IP of node1 from /home/ansible/inventory/inventory.yaml>
+node2 ansible_host=<IP of node2 from /home/ansible/inventory/inventory.yaml>
 ```
 
 

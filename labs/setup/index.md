@@ -15,7 +15,7 @@ chmod 600 lab.pem
 
 ### SSH to lab servers
 ```
-ssh -i lab.pem ec2-user@<VM IP from the spreadsheet> 
+ssh -i lab.pem ansible@<VM IP from the spreadsheet> 
 ```
 
 ## Windows 
@@ -26,7 +26,7 @@ Windows users can use the built-in PowerShell SSH client to connect to the lab s
 Open a Terminal session in Visual Studio Code and `cd` to the extracted lab directory. Inside the directory, you will see a `keys` directory. Enter it using `cd` and run the following commands.
 
 ```
-ssh -i lab.pem ec2-user@<VM IP from the spreadsheet> 
+ssh -i lab.pem ansible@<VM IP from the spreadsheet> 
 ```
 After logging into the Tower server, open a new terminal session and connect to Managed Node 1, then repeat the process for Managed Node 2.
 

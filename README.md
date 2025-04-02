@@ -15,20 +15,20 @@ Lab 3: [Python guessing game](labs/py_guessing-game)
 Lab 4: [Using Python to interact with APIs](labs/py-apis)      
 
 ### Day 2
-Lab 4: [Terraform - Create an instance](labs/tf-first-instance)    
-Lab 5: [Variables and output](labs/tf-variables-and-output)   
-Lab 6: [Multi resource deployment](labs/tf-more-variables)   
-Lab 7: OPTIONAL: [Enable remote state](labs/tf-remote-state)   
-Lab 8: [Write a module](labs/tf-write-module)   
-Lab 9: [Refactor monolithic code](labs/tf-refactor)   
+Lab 5: [Terraform - Create an instance](labs/tf-first-instance)    
+Lab 6: [Variables and output](labs/tf-variables-and-output)   
+Lab 7: [Multi resource deployment](labs/tf-more-variables)   
+Lab 8: OPTIONAL: [Enable remote state](labs/tf-remote-state)   
+Lab 9: [Write a module](labs/tf-write-module)   
+Lab 10: [Refactor monolithic code](labs/tf-refactor)   
 
 
 ### Day 3
-Lab 10: [Access Ansible VMs](labs/setup)    
-Lab 11: [Install Ansible](labs/setup-ansible)    
-Lab 12: [Ansible inventory](labs/inventory)    
-Lab 13: [Ansible ad-hoc](labs/ad-hoc)    
-Lab 14: [Ansible playbook fundamentals](labs/playbook-fun)    
+Lab 11: [Access Ansible VMs](labs/setup)    
+Lab 12: [Install Ansible](labs/setup-ansible)    
+Lab 13: [Ansible inventory](labs/inventory)    
+Lab 14: [Ansible ad-hoc](labs/ad-hoc)    
+Lab 15: [Ansible playbook fundamentals](labs/playbook-fun)    
 
 
 <!-- ### Day 4

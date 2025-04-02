@@ -39,7 +39,7 @@ The first thing needed is to install the Remote - SSH extension.
 5. Click on the icon to open the Remote Explorer.
 
 ### Create the SSH configuration file.
-In the Remote Explorer, click on the gear icon (⚙️) in the top right corner and select "Open SSH Configuration File." This will open the SSH configuration file in a new editor tab.
+In the Remote Explorer, rest your mouse cursor over **SSH**, click on the gear icon (⚙️) in the top right corner, and select "Open SSH Configuration File." This will open the SSH configuration file in a new editor tab.
 ### Add the SSH configuration for the lab servers.
 Add the following lines to the SSH configuration file, replacing `<VM IP from the spreadsheet>` with the actual IP addresses of your Tower server.
 

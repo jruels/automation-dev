@@ -9,20 +9,9 @@ If the report is collected, the playbook should write and edit the file to repla
 
 ### Prerequisites
 
-Log in to the Control Node as `ec2-user` and sudo to the `ansible` user.
- ```
- sudo su - ansible
- ```
+In VS Code, create a new lab directory named `lab-error-handling`
 
- Create and enter the working directory
-
- ```
- mkdir /home/ansible/lab-error-handling && cd /home/ansible/lab-error-handling
- ```
-
-
-
-Create a playbook named `report.yml`
+In the `lab-error-handling` folder, create a playbook named `report.yml`
 
 First, we'll specify our **host** and **tasks** (**name**, and **debug** message):
 
@@ -109,7 +98,7 @@ We can use the **replace** module for this task, and we'll sneak it in between t
 ansible-playbook /home/ansible/lab-error-handling/report.yml
 ```
 
-If all went well, we can read the downloaded text file:
+If all went well, we can read the downloaded text file with `cat` or open it in VS Code:
 
 ```
 cat /home/ansible/lab-error-handling/transaction_list
@@ -123,29 +112,7 @@ After confirming the playbook successfully downloads and updates the `transactio
 cd ~/automation-dev && git pull
 ```
 
-Add the `ansible` user to the `sudoers` file. 
 
-Exit to the `ec2-user` account
-```
-exit
-```
-
-As `ec2-user` run `visudo`   
-
-```
-sudo visudo
-```
-
-Add the following: 
-```
-ansible    ALL=(ALL)       NOPASSWD: ALL
-```
-
-Change back to the `ansible` user. 
-
-```
-sudo su - ansible
-```
 
 ```sh
 ansible-playbook ~/automation-dev/labs/error-handling/maint/break_stuff.yml --tags service_down

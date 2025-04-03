@@ -8,24 +8,13 @@ We must also create an accompanying playbook in `/home/ansible/lab-template/secu
 
 ## Logging In
 
-Log in to the server as `ec2-user` and sudo to the `ansible` user.
- ```
- sudo su - ansible
- ```
 
-Create and enter a working directory
 
- ```
- mkdir /home/ansible/lab-template && cd /home/ansible/lab-template
- ```
+In VS Code, create a new lab directory named `lab-template`
 
 ## Create a Template *sudoers* File
 
-```
-vim hardened.j2 
-```
-
-Now that we're in Vim, we'll put these contents in the file:
+Inside the new directory, create a file named `hardened.js` with the contents below:
 
 ```
 {% raw %}
@@ -42,57 +31,21 @@ Host_Alias DBSERVERS = {{ groups['database']|join(' ') }}
 Create an `inventory` file containing: 
 
 ```
-localhost
+localhost ansible_connection=local
 [nodes]
-node1 ansible_host=<IP of node1 from spreadsheet> 
-node2 ansible_host=<IP of node2 from spreadsheet> 
+node1 ansible_host=<IP of node1> 
+node2 ansible_host=<IP of node2> 
 [web]
-node1 ansible_host=<IP of node1 from spreadsheet> 
+node1 ansible_host=<IP of node1> 
 [database]
-node2 ansible_host=<IP of node2 from spreadsheet> 
-```
-
-## Set up SSH key
-
-We must configure SSH access to localhost as the `ansible` user. 
-
-```
-cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
-```
-
- Set permissions on the `authorized_keys` file
-
-```
-chmod 600 ~/.ssh/authorized_keys
-```
-
-
-
-Confirm you can ssh as the `ansible` user to `localhost`
-
-```
-ssh localhost
-```
-
-Type `yes` when prompted to accept the key. 
-
-You should now be logged into `localhost` over `SSH` as the `ansible` user. 
-
-
-
-Exit the SSH connection
-
-```
-exit
+node2 ansible_host=<IP of node2> 
 ```
 
 
 
 ## Create a Playbook
 
-```
-vim security.yml 
-```
+In the `lab-template` directory, create a playbook named `security.yml`
 
 The `security.yml` file should look like this:
 

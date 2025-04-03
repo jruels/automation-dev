@@ -4,6 +4,38 @@
 
 ### Prerequisites
 
+Ansible Automation Platform (AAP), requires your code be stored in version control. We are going to create a GitHub repository for our Ansible playbooks.
+
+
+
+#### Create a new Repository in your personal GitHub Account.
+
+Inside the Windows VM complete the following steps.
+
+1. Log in or Create a new account [GitHub](https://github.com/) account
+2. Click New Repository
+3. Name the reposistory `ansible-working`
+4. Check the `Add a README file` checkbox
+5. Click the `Create Repository` button
+6. In the new repository click the `code` button to expose the `https url` for the repository
+7. Click the copy button to copy the `https url` for the repo to use in the next step.
+
+
+
+#### Open the newly created repository in VS Code
+
+1. Launch VS Code from the Start Menu or Task Bar
+2. Select the Source Control Tab from the toolbar on the left
+3. In the top of the VS Code window click "Untitled (Workspace)"
+4. Type: `> clone` and choose `Git: Clone`
+5. Paste the URL to newly created Repo
+6. In the choose a folder dialog, select your `repos` folder.
+7. Click the `select as Repository Destination` button
+8. In the Visual Studio Code dialog click the `Add to Workspace` button to open the repository in VS Code
+9. In the left Toolbar click the Explorer button.
+
+
+
 #### Red Hat Developer account
 
 Go to the [Red Hat Developer portal](https://developers.redhat.com/about), click "Join now," and fill out the form. 
@@ -71,7 +103,7 @@ The installation file has already been copied to the `/home/ansible` directory.
 Enter directory 
 
 ```bash
-cd /home/ansible/ansible-automation-platform-setup-bundle
+cd /home/ansible/ansible-automation-platform-setup-bundle-2.4-7.5-x86_64
 ```
 
 

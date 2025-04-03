@@ -62,7 +62,15 @@ One of the great features of the Ansible Automation Platform is to make credenti
 
 To access the new server we need to provide our SSH private key
 
-Copy the **complete private key** (including “BEGIN” and “END” lines) from `lab.pem`, and save it for the next step.
+
+
+In the terminal for your controller server, run the following command as the ansible user:
+
+```
+cat ~/.ssh/id_rsa
+```
+
+Copy the **complete private key** (including “BEGIN” and “END” lines) and save it for the next step.
 
 
 

@@ -9,32 +9,6 @@ This exercise will cover
   - Ansible Automation Controller **Credentials**
 - Running ad hoc commands via the Ansible Automation Platform web UI
 
-## Prerequisites 
-
-### Configure the `ansible` user on the Control Node
-
-Add a new `ansible` user to the control node. This user will be used for running `ansible` tasks. 
-
-On the Controller node run: 
-
-```
-sudo useradd ansible
-```
-
-
-
-Configure the `ansible` user on the control node for ssh shared key access to the managed nodes.
-
-**Note:** Do not use a passphrase for the key pair.
-
-Create a key pair for the `ansible` user on the control host, accepting the defaults when prompted:
-
-```
-sudo su - ansible
-ssh-keygen 
-```
-
-
 
 ## Create an Inventory
 
@@ -88,13 +62,7 @@ One of the great features of the Ansible Automation Platform is to make credenti
 
 To access the new server we need to provide our SSH private key
 
-Log into the control node as the `ec2-user` through SSH, sudo to the `ansible` user, and run the following command 
-
-```bash
-cat .ssh/id_rsa
-```
-
-Copy the **complete private key** (including “BEGIN” and “END” lines) , and save it for the next step.
+Copy the **complete private key** (including “BEGIN” and “END” lines) from `lab.pem`, and save it for the next step.
 
 
 

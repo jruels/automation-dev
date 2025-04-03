@@ -31,8 +31,8 @@ Lab 14: [Ansible playbook fundamentals](labs/playbook-fun)
 
 
 ### Day 4
-Lab 15: [Install Ansible Tower](labs/install-aap/) 
-Lab 16: [AAP inventory and credentials](labs/aap-inventory-creds-ad-hoc/)   
+Lab 15: [Install Ansible Tower](labs/install-aap/)   
+Lab 16: [AAP inventory and credentials](labs/aap-inventory-creds-ad-hoc/)     
 Lab 17: [AAP projects and jobs](labs/aap-projects-templates-jobs/)   
 Lab 18: [Ansible Playbook Error Handling](labs/error-handling/)   
   

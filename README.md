@@ -39,7 +39,7 @@ Lab 17: [AAP projects and jobs](labs/aap-projects-templates-jobs/)
 
 
 ### Day 5
-Lab 18: [Ansible Playbook Error Handling](labs/error-handling/)
+Lab 18: [Ansible Playbook Error Handling](labs/error-handling/)   
 Lab 19: [Ansible Templating](labs/templates/)   
 Lab 20: [Ansible roles](labs/roles/)   
 Lab 21: [Write an Ansible module](labs/gh_module/)   

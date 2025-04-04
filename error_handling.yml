@@ -3,6 +3,10 @@
   tasks:
     - name: download transaction_list
       block:
+        - file:
+            path: /home/ansible/lab-error-handling
+            state: directory
+            mode: '0755'
         - get_url:
             url: https://bit.ly/3dtJtR7
             dest: /home/ansible/lab-error-handling/transaction_list

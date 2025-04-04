@@ -34,11 +34,12 @@ Lab 14: [Ansible playbook fundamentals](labs/playbook-fun)
 Lab 15: [Install Ansible Tower](labs/install-aap/)   
 Lab 16: [AAP inventory and credentials](labs/aap-inventory-creds-ad-hoc/)     
 Lab 17: [AAP projects and jobs](labs/aap-projects-templates-jobs/)   
-Lab 18: [Ansible Playbook Error Handling](labs/error-handling/)   
+   
   
 
 
-<!-- ### Day 5
+### Day 5
+Lab 18: [Ansible Playbook Error Handling](labs/error-handling/)
 Lab 19: [Ansible Templating](labs/templates/)   
 Lab 20: [Ansible roles](labs/roles/)   
-Lab 21: [Write an Ansible module](labs/gh_module/)    -->
+Lab 21: [Write an Ansible module](labs/gh_module/)   

@@ -35,7 +35,7 @@ Host_Alias DBSERVERS = {{ groups['database']|join(' ') }}
 
 ## Create an inventory file
 
-In AAP, create an inventory containing: 
+Create an inventory file containing the following:
 
 * Three groups (`nodes`, `web`, and `database`)
 * The `nodes` group should contain both nodes
@@ -46,7 +46,7 @@ In AAP, create an inventory containing:
 
 ## Create a job template
 
-Create a job template in AAP to run the playbook.
+Execute the playbook
 
 Confirm everything was deployed successfully. 
 

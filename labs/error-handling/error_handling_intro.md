@@ -27,7 +27,7 @@ Now, create a project with your `ansible-working` repository
 
 * Name: **ansible-working**
 * Source Control Type: **Git**
-* Source Control URL: **https://github.com/<YOUR_USERNAME>/ansible-working.git**
+* Source Control URL: https://github.com/[YOUR_USERNAME]/ansible-working.git
 * Options: 
   * **Clean**
   * **Delete**

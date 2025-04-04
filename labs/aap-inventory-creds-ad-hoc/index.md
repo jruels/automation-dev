@@ -60,15 +60,11 @@ One of the great features of the Ansible Automation Platform is to make credenti
 
 > **TIP**:This is one of the most important features of Automation Platform: **Credential Separation**! Credentials are defined separately and not with the hosts or inventory settings.
 
-To access the new server we need to provide our SSH private key
+We need to configure the Ansible Automation Platform with the Controller SSH Private Key to enable it to connect to our managed nodes.
 
 
 
-In the terminal for your controller server, run the following command as the ansible user:
-
-```
-cat ~/.ssh/id_rsa
-```
+In the VS Code window that is connected to the Controller, expand `.ssh` and click `id_rsa`
 
 Copy the **complete private key** (including “BEGIN” and “END” lines) and save it for the next step.
 

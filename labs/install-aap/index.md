@@ -24,9 +24,9 @@ Inside the Windows VM complete the following steps.
 
 #### Open the newly created repository in VS Code
 
-1. Launch VS Code from the Start Menu or Task Bar
+1. Launch a new VS Code Window.
 2. Select the Source Control Tab from the toolbar on the left
-3. In the top of the VS Code window click "Untitled (Workspace)"
+3. In the top of the VS Code window click the search bar.
 4. Type: `> clone` and choose `Git: Clone`
 5. Paste the URL to newly created Repo
 6. In the choose a folder dialog, select your `repos` folder.

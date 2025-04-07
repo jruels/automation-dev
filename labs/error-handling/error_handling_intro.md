@@ -52,7 +52,7 @@ Create a template with the following to restore the service:
 
 * Name: **service_up**
 * Inventory: **First Inventory**
-* Project: **auto-dev**
+* Project: **automation-dev**
 * Execution Environment: **Default execution environment**
 * Playbook: **labs/error-handling/maint/break_stuff.yml**
 * Credentials: **Linux credentials**

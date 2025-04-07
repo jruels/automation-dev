@@ -2,36 +2,13 @@
 
 Working with Ansible roles is a key concept. This should not be a surprise, considering how much functionality roles provide. This exercise covers how to create a role and how to use roles within a playbook. After completing this learning activity, you will better understand how to work with Ansible roles.
 
-Log in to the control node as `ec2-user` and sudo to the `ansible` user.
- ```
- sudo su - ansible
- ```
-
-### Prerequisites
-
-Before we begin, we need to pull the latest changes from our lab repo.
-
-cd into the lab repo directory and pull updates.
-
-```
-cd ~/automation-dev && git pull
-```
 
 
+In VS Code, open your `ansible-working` repository.
 
- Create and enter a working directory
+Create a directory named `roles`
 
- ```
- mkdir /home/ansible/lab-roles && cd /home/ansible/lab-roles
- ```
-
-
-
-Create a `roles` directory for our `baseline` role 
-
-```
-mkdir roles
-```
+Inside that directory, create a sub-folder `baseline`
 
 
 
@@ -163,8 +140,9 @@ mkdir roles
      import_tasks: deploy_noc_user.yml
    ```
    
-
    
+   
+
 Save and exit with **Escape** followed by `:wq`.
 
 ### Edit `web.yml` to Deploy the `baseline` Role

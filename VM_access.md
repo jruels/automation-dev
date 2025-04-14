@@ -4,7 +4,7 @@
 | Harika Atte             | WNS2022-82  | tekWNS2022!                |                                               |
 | Chitra Balasubramaniam  | WNS2022-83  | tekWNS2022!                |                                               |
 | Tyrece Bennett          | WNS2022-84  | tekWNS2022!                |                                               |
-| Frankie Brazos Jr       | WNS2022-85  | tekWNS2022!                |                                               |
+| Subba Pendela           | WNS2022-85  | tekWNS2022!                |                                               |
 | Deorus Doby             | WNS2022-86  | tekWNS2022!                |                                               |
 | Rashmi Dwarakanath      | WNS2022-87  | tekWNS2022!                |                                               |
 | Arturo Gomez            | WNS2022-88  | tekWNS2022!                |                                               |

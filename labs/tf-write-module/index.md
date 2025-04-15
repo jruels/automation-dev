@@ -53,13 +53,13 @@ Ensure that Terraform has downloaded all the necessary providers and modules by 
 
 In this lab, you will create a local submodule within your existing configuration that uses the s3 bucket resource from the AWS provider.
 
-Inside your `tf-lab5` folder, create a sub-folder called `modules`. In the new `modules` folder create a sub-folder named `aws-s3-static-website-bucket`. 
+Inside your `tf-lab5/learn-terraform-modules-create` folder, create a sub-folder called `modules`. In the new `modules` folder create a sub-folder named `aws-s3-static-website-bucket`. 
 
 
 
 After creating these directories, your configuration's directory structure will look like this:
 ```
-.
+learn-terraform-modules-create
 ├── LICENSE
 ├── README.md
 ├── main.tf

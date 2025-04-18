@@ -39,7 +39,7 @@ Create a template with the following to simulate a down service:
 
 * Name: **service_down**
 * Inventory: **First Inventory**
-* Project: **auto-dev**
+* Project: **automation-dev**
 * Execution Environment: **Default execution environment**
 * Playbook: **labs/error-handling/maint/break_stuff.yml**
 * Credentials: **Linux credentials**

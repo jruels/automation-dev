@@ -4,9 +4,8 @@ Working with Ansible roles is a key concept. This should not be a surprise, cons
 
 
 
-In VS Code, open your `ansible-working` repository.
+In the VS Code session connected to your Ansible Controller, create a directory `roles`.
 
-Create a directory named `roles`
 
 Inside that directory, create a sub-folder `baseline`
 
@@ -149,11 +148,11 @@ Save and exit with **Escape** followed by `:wq`.
 
 1. Copy `web.yml` to the lab directory:
 
-   `cp /home/ansible/automation-dev/labs/roles/resources/web.yml /home/ansible/lab-roles/ `
+   `cp /home/ansible/automation-dev/labs/roles/resources/web.yml /home/ansible/roles/ `
 
 2. Open `web.yml`:
 
-   `vim /home/ansible/lab-roles/web.yml `
+   `vim /home/ansible/roles/web.yml `
 
 3. Edit it to match the following:
 

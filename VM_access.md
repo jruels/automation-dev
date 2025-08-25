@@ -1,6 +1,6 @@
 | Name                   | Username     | Virtual Machine Password | Virtual Machine Portal       |
 |:-----------------------|:-------------|:-------------------------|:-----------------------------|
-| Adrian Vences Lopez    | WSAUTO25-121 | TEKwsauto25!             | https://my.ablazedesktop.com |
+| Adrian Vences Lopez    | WSAUTO25-121 | TEKwsauto25!             | [https://my.ablazedesktop.com](https://my.ablazedesktop.com) |
 | Alan Byers             | WSAUTO25-122 | TEKwsauto25!             |                              |
 | Anupama Subramany      | WSAUTO25-123 | TEKwsauto25!             |                              |
 | Barry Robertson        | WSAUTO25-124 | TEKwsauto25!             |                              |

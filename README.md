@@ -14,7 +14,7 @@ Lab 2: [Using Python to interact with APIs](labs/py-apis)
 Lab 3: [AWS Setup](labs/setup.md)      
 
 ### Day 2
-Lab 4[Terraform - Create an instance](labs/tf-first-instance)    
+Lab 4 [Terraform - Create an instance](labs/tf-first-instance)    
 Lab 5: [Variables and output](labs/tf-variables-and-output)   
 Lab 6: [Multi resource deployment](labs/tf-more-variables)   
 Lab 7: OPTIONAL: [Enable remote state](labs/tf-remote-state)   

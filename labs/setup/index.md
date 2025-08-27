@@ -46,5 +46,40 @@ In Visual Studio Code, you can create a new folder or file as if it was on your 
 Click **Open Folder** and select `/home/ansible`.
 In future labs, you will create a directory for each lab.
 
+## Confirm Ansible is configured correctly 
+
+In the VS Code window connected to your Ansible Tower, open a terminal and run: 
+```bash 
+ansible all -i inventory -m ping 
+```
+
+This command confirms ansible can connect to the managed nodes and they have Python installed. 
+
+The expected output should look similar to below: 
+
+```
+ControlNode | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+TargetNode1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+TargetNode2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+```
+
 ## Congratulations!
 You have successfully set up your lab environment and are ready to start working on the labs.

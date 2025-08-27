@@ -99,11 +99,15 @@ When prompted, provide your Red Hat Developer username and password.
 The installation file has already been copied to the `/home/ansible` directory. 
 
 
+Confirm permissions are correct
+```bash
+sudo chown -R ansible.ansible ansible-automation-platform-setup-bundle-2.4-9-x86_64.tar
+```
 
 Enter directory 
 
 ```bash
-cd /home/ansible/ansible-automation-platform-setup-bundle-2.4-7.5-x86_64
+cd /home/ansible/ansible-automation-platform-setup-bundle-2.4-9-x86_64.tar
 ```
 
 

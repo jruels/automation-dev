@@ -101,13 +101,13 @@ The installation file has already been copied to the `/home/ansible` directory.
 
 Confirm permissions are correct
 ```bash
-sudo chown -R ansible.ansible ansible-automation-platform-setup-bundle-2.4-9-x86_64.tar
+sudo chown -R ansible.ansible ansible-automation-platform-setup-bundle-2.4-9-x86_64
 ```
 
 Enter directory 
 
 ```bash
-cd /home/ansible/ansible-automation-platform-setup-bundle-2.4-9-x86_64.tar
+cd /home/ansible/ansible-automation-platform-setup-bundle-2.4-9-x86_64
 ```
 
 

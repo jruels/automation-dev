@@ -9,7 +9,7 @@ If the report is collected, the playbook should write and edit the file to repla
 
 ### Prerequisites
 
-### Create Projects
+### Create Project
 
 In Ansible Automation Platform, create a new project with the following: 
 
@@ -22,16 +22,6 @@ In Ansible Automation Platform, create a new project with the following:
   * **Update Revision on Launch**
 
 
-
-Now, create a project with your `ansible-working` repository
-
-* Name: **ansible-working**
-* Source Control Type: **Git**
-* Source Control URL: https://github.com/[YOUR_USERNAME]/ansible-working.git
-* Options: 
-  * **Clean**
-  * **Delete**
-  * **Update Revision on Launch**
 
 ### Create templates
 
@@ -182,6 +172,18 @@ We can use the **replace** module for this task, and we'll sneak it in between t
 10. Click on the “…” menu in the “Source Control” pane, and select “Push” to push the changes to GitHub.
 
 
+
+## Create ansible-working project
+
+Now, create a project with your `ansible-working` repository
+
+* Name: **ansible-working**
+* Source Control Type: **Git**
+* Source Control URL: https://github.com/[YOUR_USERNAME]/ansible-working.git
+* Options: 
+  * **Clean**
+  * **Delete**
+  * **Update Revision on Launch**
 
 ## Run the playbook 
 

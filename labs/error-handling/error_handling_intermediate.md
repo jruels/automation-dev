@@ -94,12 +94,12 @@ Using VS Code and your `ansible-working` repository:
 ## Success Criteria
 
 Your lab is complete when:
-- [  ] The error handling playbook downloads and processes files successfully under normal conditions
-- [  ] The playbook gracefully handles connection failures with appropriate error messages
-- [  ] The "Attempt completed." message appears regardless of success or failure
-- [  ] The `#BLANKLINE` text is properly replaced with newline characters
-- [  ] All job templates execute without errors
-- [  ] The transaction list file is created with correct formatting
+- The error handling playbook downloads and processes files successfully under normal conditions
+- The playbook gracefully handles connection failures with appropriate error messages
+- The "Attempt completed." message appears regardless of success or failure
+- The `#BLANKLINE` text is properly replaced with newline characters
+- All job templates execute without errors
+- The transaction list file is created with correct formatting
 
 ## Troubleshooting Tips
 

@@ -16,24 +16,19 @@ This lab assumes you have completed the error-handling lab and have:
 
 ## Update Inventory Groups
 
-We need to add groups to the existing inventory for this lab:
+We need to update the groups the hosts are assigned to:
 
 1. Navigate to **Resources** → **Inventories**
 2. Click on **First Inventory**
 3. Click the **Groups** tab
-4. Click **Add** to create the first group:
-   * **Name**: `web`
-   * **Description**: `Web servers group`
-5. Click **Save**
-6. In the `web` group, click the **Hosts** tab and click **Add existing host**
-7. Select the first node from your inventory and click **Save**
-
-8. Go back to the inventory Groups tab and click **Add** to create the second group:
+4. Click `web` group
+6. In the `web` group, click the **Hosts** tab and remove the `Server 2`
+7. Go back to the inventory Groups tab and click **Add** to create the `database` group:
    * **Name**: `database`
    * **Description**: `Database servers group`
-9. Click **Save**
-10. In the `database` group, click the **Hosts** tab and click **Add existing host**
-11. Select the second node from your inventory and click **Save**
+8. Click **Save**
+9. In the `database` group, click the **Hosts** tab and click **Add existing host**
+10. Select the second node from your inventory and click **Save**
 
 ## Create the Template and Playbook
 

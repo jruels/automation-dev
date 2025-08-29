@@ -148,7 +148,7 @@ rm -rf inventory
 
 
 
-In the `ansible-automation-platform-setup-bundle-2.4-7.5-x86_64` folder, create a new `inventory` file and paste the following.
+In the `ansible-automation-platform-setup-bundle-2.4-9-x86_64` folder, create a new `inventory` file and paste the following.
 
 ```
 [automationcontroller]

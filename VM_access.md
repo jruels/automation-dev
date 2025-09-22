@@ -14,7 +14,7 @@
 | Kevin Flatt                 | WSAUTO25-10  | TEKwsauto25!             |                        |
 | Cesar O Romo                | WSAUTO25-11  | TEKwsauto25!             |                        |
 | Thiagarajan Rajendiran      | WSAUTO25-12  | TEKwsauto25!             |                        |
-| Krishna Leela Challagulla   | WSAUTO25-13  | TEKwsauto25!             |                        |
+| Christopher Devidal         | WSAUTO25-13  | TEKwsauto25!             |                        |
 | Ray Suarez                  | WSAUTO25-14  | TEKwsauto25!             |                        |
 | Michael Yurkovich           | WSAUTO25-15  | TEKwsauto25!             |                        |
 | Bill Brase                  | WSAUTO25-16  | TEKwsauto25!             |                        |

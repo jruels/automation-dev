@@ -247,7 +247,7 @@ else:
 
 # Test with invalid URL
 print("\nTesting invalid URL:")
-result = make_api_request('https://invalid-url-that-does-not-exist.com')
+result = make_api_request('https://invalid-url-that-does-not-exists.com')
 if result:
     print("Success! Retrieved data:", result)
 else:

@@ -91,9 +91,9 @@ from ansible.module_utils.basic import *
 
 def main():
 
-   module = AnsibleModule(argument_spec={})
-   response = {"hello": "world"}
-   module.exit_json(changed=False, meta=response)
+	 module = AnsibleModule(argument_spec={})
+	 response = {"hello": "world"}
+	 module.exit_json(changed=False, meta=response)
 
 
 if __name__ == '__main__':
@@ -189,10 +189,8 @@ def main():
 
 The above code accepts and pipes the parsed inputs `module.params` to `exit_json`.
 
-
 Update the playbook to use the vault encrypted key, and add more fields.
 
-{% raw %}
 ```yml
 - hosts: localhost
   vars_files:
@@ -201,18 +199,18 @@ Update the playbook to use the vault encrypted key, and add more fields.
     - name: Create a github Repo
       github_repo:
         github_auth_key: "{{ github_token }}"
-        username: "YOUR GITHUB USERNAME HERE"
-        name: "Hello-World"
-        description: "This is your first repository"
-        private: yes
-        has_issues: no
-        has_wiki: no
-        has_downloads: no
-        state: present
+          username: "YOUR GITHUB USERNAME HERE"
+          name: "Hello-World"
+          description: "This is your first repository"
+          private: yes
+          has_issues: no
+          has_wiki: no
+          has_downloads: no
+         state: present
       register: result
     - debug: var=result
+    
 ```
-{% endraw %}
 
 Run the playbook and it will display a dictionary of inputs passed in. 
 
@@ -362,10 +360,8 @@ There are additional options listed in the `main` function, which we will not go
 ## Update our playbook
 Update the `play.yml` playbook with tasks to create the repository. 
 
-
 Here is a sample of what that might look like: 
 
-{% raw %}
 ```yml
 - hosts: localhost
   vars_files:
@@ -373,7 +369,7 @@ Here is a sample of what that might look like:
   tasks:
     - name: Create a GitHub Repo
       github_repo:
-        github_auth_key: "{{github_token}}"
+        github_auth_key: {% raw %} "{{github_token}}" {% endraw %}
         username: "YOUR GITHUB USERNAME HERE"
         name: "Hello-World"
         description: "First repo created with custom Ansible module"
@@ -384,7 +380,6 @@ Here is a sample of what that might look like:
         state: present
       register: result
 ```
-{% endraw %}
 
 Run the playbook and confirm it created the `Hello-World` repository. 
 
@@ -394,19 +389,16 @@ ansible-playbook play.yml --ask-vault-pass
 
 
 
-
 Update the playbook with the following task to delete the repository. Remember to add tags so you can choose which task to run.
 
-{% raw %}
 ```yml
     - name: Delete GitHub Repo
       github_repo:
-        github_auth_key: "{{github_token}}"
+        github_auth_key: {% raw %} "{{github_token}}" {% endraw %}
         username: "YOUR GITHUB USERNAME HERE"
         name: "Hello-World"
         state: absent
 ```
-{% endraw %}
 
 Rerun the playbook to delete the repository (using the correct tag)
 

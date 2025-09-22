@@ -26,5 +26,4 @@
 | Subramanyam Reddy Sidda     | WSAUTO25-22  | TEKwsauto25!             |                        |
 | Siva Kallakuri              | WSAUTO25-23  | TEKwsauto25!             |                        |
 | Mukesh Jain                 | WSAUTO25-24  | TEKwsauto25!             |                        |
-|                             | WSAUTO25-25  | TEKwsauto25!             |                        |
-| Instructor                  | WSAUTO25-26  | TEKwsauto25!             |                        |
+| Instructor                  | WSAUTO25-25  | TEKwsauto25!             |                        |

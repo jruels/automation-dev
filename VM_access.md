@@ -18,7 +18,7 @@
 | Ray Suarez                  | WSAUTO25-14  | TEKwsauto25!             |                        |
 | Michael Yurkovich           | WSAUTO25-15  | TEKwsauto25!             |                        |
 | Bill Brase                  | WSAUTO25-16  | TEKwsauto25!             |                        |
-| Presten Miller              | WSAUTO25-17  | TEKwsauto25!             |                        |
+| Juan Lopez                  | WSAUTO25-17  | TEKwsauto25!             |                        |
 | Gireesh Gangadharan         | WSAUTO25-18  | TEKwsauto25!             |                        |
 | Vittal Seetimani            | WSAUTO25-19  | TEKwsauto25!             |                        |
 | Kailash Sekar               | WSAUTO25-20  | TEKwsauto25!             |                        |

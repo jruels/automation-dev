@@ -92,19 +92,6 @@ Terraform loads all configuration files within a directory and appends them toge
 Edit the `prod.tf` file by commenting out the `terraform` block, the `provider` block, and the `random_pet` resource. You can comment out the configuration by adding a `/*` at the beginning of the commented out block and a `*/` at the end, as shown below.
 
 ```hcl
-/*
- terraform {
-   required_providers {
-     aws = {
-       source = "hashicorp/aws"
-       version = "~> 4.0.0"
-     }
-     random = {
-       source  = "hashicorp/random"
-       version = "~> 3.1.0"
-     }
-   }
- }
 
  provider "aws" {
    region = var.region

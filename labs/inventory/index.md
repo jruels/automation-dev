@@ -26,8 +26,8 @@ Inside the new directory, create an `inventory` file
 
    ```
    [media] 
-   media1 ansible_host=<IP of node1 from /home/ansible/inventory/inventory.yaml>
-   media2 ansible_host=<IP of node2 from /home/ansible/inventory/inventory.yaml>
+   media1 ansible_host=<IP of TargetNode-1 from /home/ansible/inventory/inventory.yaml>
+   media2 ansible_host=<IP of TargetNode-2 from /home/ansible/inventory/inventory.yaml>
    ```
 
 
@@ -53,8 +53,8 @@ Inside the new directory, create an `inventory` file
 
    ```
    [webservers] 
-   web1 ansible_host=<IP of node1 from /home/ansible/inventory/inventory.yaml>
-   web2 ansible_host=<IP of node2 from /home/ansible/inventory/inventory.yaml>
+   web1 ansible_host=<IP of TargetNode-1 from /home/ansible/inventory/inventory.yaml>
+   web2 ansible_host=<IP of TargetNode-2 from /home/ansible/inventory/inventory.yaml>
    ```
 
 

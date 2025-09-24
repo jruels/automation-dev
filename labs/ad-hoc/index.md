@@ -14,8 +14,8 @@ Inside the `lab-ad-hoc` folder, create an `inventory` file with the following:
 
 ```
 [dbsystems]
-db1 ansible_host=<IP of node1 from /home/ansible/inventory/inventory.yaml>
-db2 ansible_host=<IP of node2 from /home/ansible/inventory/inventory.yaml>
+db1 ansible_host=<IP of TargetNode-1 from /home/ansible/inventory/inventory.yaml>
+db2 ansible_host=<IP of TargetNode-2 from /home/ansible/inventory/inventory.yaml>
 ```
 
 

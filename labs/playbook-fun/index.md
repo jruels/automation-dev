@@ -26,8 +26,8 @@ Create an `inventory` file that contains a Host Group named `web` containing nod
 
 ```
 [web]
-node1 ansible_host=<IP of node1 from /home/ansible/inventory/inventory.yaml>
-node2 ansible_host=<IP of node2 from /home/ansible/inventory/inventory.yaml>
+node1 ansible_host=<IP of TargetNode-1 from /home/ansible/inventory/inventory.yaml>
+node2 ansible_host=<IP of TargetNode-2 from /home/ansible/inventory/inventory.yaml>
 ```
 
 

@@ -174,7 +174,7 @@ After the Job has finished go to the main **Jobs** view: All jobs are listed her
 
 Time for a little challenge:
 
-- Use an ad-hoc command to confirm Rochella is in the `qa_editor` group.
+- Use an ad-hoc command to confirm `rochella` is in the `qa_editor` group.
 
 
 

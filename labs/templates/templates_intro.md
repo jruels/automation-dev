@@ -9,8 +9,8 @@ We also need to create an accompanying playbook named `security.yml` that will d
 ## Prerequisites
 
 This lab assumes you have completed the error-handling lab and have:
-- The `ansible-working` project already created in Automation Platform
-- The `First Inventory` configured with your managed nodes
+- The `ansible-working-[your initials]` project already created in Automation Platform
+- The `First Inventory-[your initials]` configured with your managed nodes
 - Linux credentials configured in Automation Platform
 - VS Code with access to your ansible-working repository
 
@@ -19,10 +19,10 @@ This lab assumes you have completed the error-handling lab and have:
 We need to update the groups the hosts are assigned to:
 
 1. Navigate to **Resources** → **Inventories**
-2. Click on **First Inventory**
+2. Click on **First Inventory-[your initials]**
 3. Click the **Groups** tab
 4. Click `web` group
-6. In the `web` group, click the **Hosts** tab and remove the `Server 2`
+6. In the `web` group, click the **Hosts** tab and remove the `Server2-[your initials]`
 7. Go back to the inventory Groups tab and click **Add** to create the `database` group:
    * **Name**: `database`
    * **Description**: `Database servers group`
@@ -96,20 +96,20 @@ In Automation Platform, create a new job template:
 1. Navigate to **Resources** → **Templates**
 2. Click **Add** and select **Add job template**
 3. Fill in the following details:
-   * **Name**: `deploy_hardened_sudoers`
+   * **Name**: `deploy_hardened_sudoers-[your initials]`
    * **Description**: `Deploy hardened sudoers template`
    * **Job Type**: `Run`
-   * **Inventory**: `First Inventory`
-   * **Project**: `ansible-working`
+   * **Inventory**: `First Inventory-[your initials]`
+   * **Project**: `ansible-working-[your initials]`
    * **Execution Environment**: `Default execution environment`
    * **Playbook**: `templates-lab/security.yml`
-   * **Credentials**: `Linux credentials`
+   * **Credentials**: `Linux credentials-[your initials]`
    * **Privilege Escalation**: Check the box
 4. Click **Save**
 
 ## Run the Job Template
 
-1. Click the **Launch** button on your `deploy_hardened_sudoers` template
+1. Click the **Launch** button on your `deploy_hardened_sudoers-[your initials]` template
 2. Monitor the job execution in real-time
 3. Review the job output to ensure successful deployment
 
@@ -123,7 +123,7 @@ The output should show:
 ### Using Ad-Hoc Commands
 
 1. Navigate to **Resources** → **Inventories**
-2. Select **First Inventory**
+2. Select **First Inventory-[your initials]**
 3. Click the **Hosts** tab
 4. Select all hosts using the checkboxes
 5. Click **Run Command**

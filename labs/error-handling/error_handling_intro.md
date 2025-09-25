@@ -1,4 +1,39 @@
 # Ansible Error Handling
+
+### Prerequisites
+
+Ansible Automation Platform (AAP), requires your code be stored in version control. We are going to create a GitHub repository for our Ansible playbooks.
+
+
+
+#### Create a new Repository in your personal GitHub Account.
+
+Inside the Windows VM complete the following steps.
+
+1. Log in or Create a new account [GitHub](https://github.com/) account
+2. Click New Repository
+3. Name the reposistory `ansible-working`
+4. Check the `Add a README file` checkbox
+5. Click the `Create Repository` button
+6. In the new repository click the `code` button to expose the `https url` for the repository
+7. Click the copy button to copy the `https url` for the repo to use in the next step.
+
+
+
+#### Open the newly created repository in VS Code
+
+1. Launch a new VS Code Window.
+2. Select the Source Control Tab from the toolbar on the left
+3. In the top of the VS Code window click the search bar.
+4. Type: `> clone` and choose `Git: Clone`
+5. Paste the URL to newly created Repo
+6. In the choose a folder dialog, select your `repos` folder.
+7. Click the `select as Repository Destination` button
+8. In the Visual Studio Code dialog click the `Add to Workspace` button to open the repository in VS Code
+9. In the left Toolbar click the Explorer button.
+
+
+
 ## Scenario
 
 We have to set up automation to pull down a data file, from a notoriously unreliable third-party system, for integration purposes. Create a playbook that attempts to download https://bit.ly/3dtJtR7 and save it as `transaction_list` to `localhost`. The playbook should gracefully handle the site being down by outputting the message "Site appears to be down. Try again later." to stdout. If the task succeeds, the playbook should write "File downloaded." to stdout. No matter if the playbook errors or not, it should always output "Attempt completed." to stdout.
@@ -13,7 +48,7 @@ If the report is collected, the playbook should write and edit the file to repla
 
 In Ansible Automation Platform, create a new project with the following: 
 
-* Name: **automation-dev**
+* Name: **automation-dev-[your initials]**
 * Source Control Type: **Git**
 * Source Control URL: **https://github.com/jruels/automation-dev.git**
 * Options: 
@@ -27,12 +62,12 @@ In Ansible Automation Platform, create a new project with the following:
 
 Create a template with the following to simulate a down service: 
 
-* Name: **service_down**
-* Inventory: **First Inventory**
-* Project: **automation-dev**
+* Name: **service_down-[your initials]**
+* Inventory: **First Inventory-[your initials]**
+* Project: **automation-dev-[your initials]**
 * Execution Environment: **Default execution environment**
 * Playbook: **labs/error-handling/maint/break_stuff.yml**
-* Credentials: **Linux credentials**
+* Credentials: **Linux credentials-[your initials]**
 * Job Tags: **service_down**
 * Privilege Escalation: **Check the box**
 
@@ -40,12 +75,12 @@ Create a template with the following to simulate a down service:
 
 Create a template with the following to restore the service: 
 
-* Name: **service_up**
-* Inventory: **First Inventory**
-* Project: **automation-dev**
+* Name: **service_up-[your initials]**
+* Inventory: **First Inventory-[your initials]**
+* Project: **automation-dev-[your initials]**
 * Execution Environment: **Default execution environment**
 * Playbook: **labs/error-handling/maint/break_stuff.yml**
-* Credentials: **Linux credentials**
+* Credentials: **Linux credentials-[your initials]**
 * Job Tags: **service_up**
 * Privilege Escalation: **Check the box**
 
@@ -177,7 +212,7 @@ We can use the **replace** module for this task, and we'll sneak it in between t
 
 Now, create a project with your `ansible-working` repository
 
-* Name: **ansible-working**
+* Name: **ansible-working-[your initials]**
 * Source Control Type: **Git**
 * Source Control URL: https://github.com/[YOUR_USERNAME]/ansible-working.git
 * Options: 
@@ -189,12 +224,12 @@ Now, create a project with your `ansible-working` repository
 
 In Automation Platform, create a new template with the following: 
 
-* Name: **error_handling**
-* Inventory: **First Inventory**
-* Project: **ansible-working**
+* Name: **error_handling-[your initials]**
+* Inventory: **First Inventory-[your initials]**
+* Project: **ansible-working-[your initials]**
 * Execution Environment: **Default execution environment**
 * Playbook: **report.yml**
-* Credentials: **Linux credentials**
+* Credentials: **Linux credentials-[your initials]**
 
 
 

@@ -52,7 +52,7 @@ Within **Resources** -> **Projects**, click the **Add** button to create a proje
 
 | Parameter                        | Value                                             |
 | -------------------------------- | ------------------------------------------------- |
-| Name                             | Webops Git Repo                                   |
+| Name                             | Webops Git Repo-[your initials]                                   |
 | Organization                     | Default                                           |
 | Execution Environment            | Default execution environment                         |
 | Source Control Credential Type   | Git                                               |
@@ -68,7 +68,7 @@ Within **Resources** -> **Projects**, click the **Add** button to create a proje
 
 | Parameter                        | Value                                             |
 | -------------------------------- | ------------------------------------------------- |
-| Name                             | Webdev Git Repo                                   |
+| Name                             | Webdev Git Repo-[your initials]                                   |
 | Organization                     | Default                                           |
 | Default Execution Environment    | Default execution environment                         |
 | Source Control Credential Type   | Git                                               |
@@ -86,13 +86,13 @@ Within **Resources** -> **Templates**, click the **Add** button and choose **Add
 
 | Parameter             | Value                                |
 | --------------------- | ------------------------------------ |
-| Name                  | Web App Deploy                       |
+| Name                  | Web App Deploy-[your initials]                       |
 | Job Type              | Run                                  |
-| Inventory             | First inventory                      |
-| Project               | Webops Git Repo                      |
+| Inventory             | First inventory-[your initials]                      |
+| Project               | Webops Git Repo-[your initials]                      |
 | Execution Environment | Default execution environment        |
 | Playbook              | `rhel/webops/web_infrastructure.yml` |
-| Credentials           | Linux credentials                    |
+| Credentials           | Linux credentials-[your initials]                    |
 | Limit                 | web                                  |
 | Options               | ✓ Privilege Escalation               |
 
@@ -104,13 +104,13 @@ Within **Resources** -> **Templates**, click the **Add** button and choose **Add
 
 | Parameter             | Value                              |
 | --------------------- | ---------------------------------- |
-| Name                  | Node.js Deploy                     |
+| Name                  | Node.js Deploy-[your initials]                     |
 | Job Type              | Run                                |
-| Inventory             | First inventory                    |
-| Project               | Webdev Git Repo                    |
+| Inventory             | First inventory-[your initials]                    |
+| Project               | Webdev Git Repo-[your initials]                    |
 | Execution Environment | Default execution environment      |
 | Playbook              | `rhel/webdev/install_node_app.yml` |
-| Credentials           | Linux credentials                  |
+| Credentials           | Linux credentials-[your initials]                  |
 | Limit                 | web                                |
 | Options               | ✓ Privilege Escalation             |
 
@@ -130,7 +130,7 @@ Within **Resources** -> **Templates**, click the **Add** button and choose **Add
 
 | **Parameter** | Value                |
 | ------------- | -------------------- |
-| Name          | Deploy Webapp Server |
+| Name          | Deploy Webapp Server-[your initials] |
 | Organization  | Default              |
 
 Click **Save**
@@ -155,7 +155,7 @@ Hover over the node and click the (+) sign to add a new node.
 
 > **TIP**: The run type allows for more complex workflows. You could lay out different execution paths for successful and for failed playbook runs.
 
-- For **Node Type** select **Job Template** (default) and choose the **Node.js Deploy** job template. Click **Save**.
+- For **Node Type** select **Job Template** (default) and choose the **Node.js Deploy-[your initials]** job template. Click **Save**.
 
   ![Add Nodejs](https://aap2.demoredhat.com/exercises/ansible_rhel/2.6-workflows/images/add_node_nodejs.png)
 
@@ -171,14 +171,14 @@ From within the **Deploy Webapp Server** Details page, **Launch** the workflow.
 
 
 
-Note how the workflow run is shown in the Jobs > Deploy Webapp Server Output. In contrast to a normal job template job execution, there is no playbook output when the job completes but the time to complete the job is displayed. If you want to look at the actual playbook run, hover over the node you wish to see the details on and click it. Within the Details view of the job, select the **Output** menu to see the playbook output. If you want to get back the **Output** view of the **Deploy WebappServer** workflow, under **Views -> Jobs -> XX - Deploy Webapp Server** will take you back to the Output overview.
+Note how the workflow run is shown in the Jobs > Deploy Webapp Server Output. In contrast to a normal job template job execution, there is no playbook output when the job completes but the time to complete the job is displayed. If you want to look at the actual playbook run, hover over the node you wish to see the details on and click it. Within the Details view of the job, select the **Output** menu to see the playbook output. If you want to get back the **Output** view of the **Deploy WebappServer-[your initials]** workflow, under **Views -> Jobs -> XX - Deploy Webapp Server-[your initials]** will take you back to the Output overview.
 
 NOTE: Where `XX` is the number of the job run.
 
 ![jobs view of workflow](https://aap2.demoredhat.com/exercises/ansible_rhel/2.6-workflows/images/job_workflow.png)
 
 ## Challenge Lab: Recovery workflow
-Using what you learned in this lab, create a workflow with three jobs (JobA, JobB, JobC). If JobA is successful, JobB runs; if JobA fails, JobC runs.
+Using what you learned in this lab, create a workflow with three jobs (JobA-[your initials], JobB-[your initials], JobC-[your initials]). If JobA is successful, JobB runs; if JobA fails, JobC runs.
 
 
 ## Congrats!

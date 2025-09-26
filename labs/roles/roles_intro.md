@@ -29,7 +29,7 @@ Inside that directory, create a sub-folder `baseline`
 
 2. Create a file called `deploy_motd.yml`:
 
-   `vim baseline/tasks/deploy_motd.yml `
+   `vi baseline/tasks/deploy_motd.yml `
 
 3. Add the following content:
 
@@ -46,7 +46,7 @@ Inside that directory, create a sub-folder `baseline`
 
 4. Open `main.yml`:
 
-   `vim baseline/tasks/main.yml `
+   `vi baseline/tasks/main.yml `
 
 5. Add the following lines to the file:
 
@@ -63,7 +63,7 @@ Inside that directory, create a sub-folder `baseline`
 
 1. Create a file called `edit_hosts.yml`:
 
-   `vim baseline/tasks/edit_hosts.yml `
+   `vi baseline/tasks/edit_hosts.yml `
 
 2. Add the following content:
 
@@ -82,7 +82,7 @@ Inside that directory, create a sub-folder `baseline`
 
 3. Open `main.yml`:
 
-   `vim baseline/tasks/main.yml `
+   `vi baseline/tasks/main.yml `
 
 4. Add the following lines to the bottom of the file:
 
@@ -103,7 +103,7 @@ Inside that directory, create a sub-folder `baseline`
 
 2. Create a file called `deploy_noc_user.yml`:
 
-   `vim baseline/tasks/deploy_noc_user.yml `
+   `vi baseline/tasks/deploy_noc_user.yml `
 
 3. Add the following content:
 
@@ -130,7 +130,7 @@ Inside that directory, create a sub-folder `baseline`
 
 4. Open `main.yml`:
 
-   `vim baseline/tasks/main.yml `
+   `vi baseline/tasks/main.yml `
 
 5. Add the following to the file:
 
@@ -152,7 +152,7 @@ Save and exit with **Escape** followed by `:wq`.
 
 2. Open `web.yml`:
 
-   `vim /home/ansible/roles/web.yml `
+   `vi /home/ansible/roles/web.yml `
 
 3. Edit it to match the following:
 

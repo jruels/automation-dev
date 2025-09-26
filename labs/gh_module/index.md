@@ -198,7 +198,7 @@ Update the playbook to use the vault encrypted key, and add more fields.
   tasks:
     - name: Create a github Repo
       github_repo:
-        github_auth_key: "{{ github_token }}"
+        github_auth_key: {% raw %} "{{ github_token }}" {% endraw %}
           username: "YOUR GITHUB USERNAME HERE"
           name: "Hello-World"
           description: "This is your first repository"

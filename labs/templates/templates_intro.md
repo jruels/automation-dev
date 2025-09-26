@@ -130,7 +130,7 @@ The output should show:
 6. Configure the ad-hoc command:
    * **Module**: `shell`
    * **Arguments**: `sudo cat /etc/sudoers.d/hardened`
-   * **Credentials**: `Linux credentials`
+   * **Credentials**: `Linux credentials-[your initials]`
    * **Privilege Escalation**: Check the box
 7. Click **Launch**
 

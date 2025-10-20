@@ -23,6 +23,6 @@
 | Andrea Stiffelman         | WSAUTO25-21  | TEKwsauto25!             |                        |
 | Janice Lee                | WSAUTO25-22  | TEKwsauto25!             |                        |
 | Jun Wang                  | WSAUTO25-23  | TEKwsauto25!             |                        |
-| Richard Guerra            | WSAUTO25-24  | TEKwsauto25!             |                        |
+| Luis Alvarez              | WSAUTO25-24  | TEKwsauto25!             |                        |
 | Jose Bascalla             | WSAUTO25-25  | TEKwsauto25!             |                        |
 | Instructor                | WSAUTO25-26  | TEKwsauto25!             |                        |

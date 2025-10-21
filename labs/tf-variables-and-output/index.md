@@ -59,6 +59,7 @@ resource "aws_instance" "lab2-tf-example" {
    ```
 
 3. If everything looks correct, type `yes` to confirm and apply the configuration.
+    * If you get an error, read it and troubleshoot the issue. 
 
 4. Apply the configuration again, passing the variable via the command line:
 

@@ -8,7 +8,7 @@
 | Shashi Thanikella         | WSAUTO25-06  | TEKwsauto25!             |                        |
 | Ekta Jayendrakumar Patel  | WSAUTO25-07  | TEKwsauto25!             |                        |
 | Andrew Tomlinson          | WSAUTO25-08  | TEKwsauto25!             |                        |
-| Tony T Chan               | WSAUTO25-09  | TEKwsauto25!             |                        |
+| Richard Guerra            | WSAUTO25-09  | TEKwsauto25!             |                        |
 | Amer Ali                  | WSAUTO25-10  | TEKwsauto25!             |                        |
 | Shahab Jan                | WSAUTO25-11  | TEKwsauto25!             |                        |
 | Gokul Huggahalli          | WSAUTO25-12  | TEKwsauto25!             |                        |

@@ -1,13 +1,13 @@
 | Name                     | Username     | Virtual Machine Password | Virtual Machine Portal |
 |:-------------------------|:-------------|:-------------------------|:-----------------------|
 | Marcelo Kurtz            | WSAUTO25-31  | TEKwsauto25!             | [Ablaze Portal](https://my.ablazedesktop.com) |
-| Annie Cheng              | WSAUTO25-32  | TEKwsauto25!             |                        |
+| Anandan                  | WSAUTO25-32  | TEKwsauto25!             |                        |
 | Orlando Suarez           | WSAUTO25-33  | TEKwsauto25!             |                        |
 | Hyundeok Park            | WSAUTO25-34  | TEKwsauto25!             |                        |
 | Naveen Palla             | WSAUTO25-35  | TEKwsauto25!             |                        |
-| Fawaz Adetunji           | WSAUTO25-36  | TEKwsauto25!             |                        |
+| Dan                      | WSAUTO25-36  | TEKwsauto25!             |                        |
 | Bill Stephens            | WSAUTO25-37  | TEKwsauto25!             |                        |
-| Ramakanth Vogirala       | WSAUTO25-38  | TEKwsauto25!             |                        |
+| Deepa                    | WSAUTO25-38  | TEKwsauto25!             |                        |
 | Fredrick Ketangenyi      | WSAUTO25-39  | TEKwsauto25!             |                        |
 | Caroline Mazariegos      | WSAUTO25-40  | TEKwsauto25!             |                        |
 | Ramesh Ramachandran      | WSAUTO25-41  | TEKwsauto25!             |                        |

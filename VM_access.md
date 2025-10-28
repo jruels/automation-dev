@@ -10,11 +10,11 @@
 | Deepa                    | WSAUTO25-38  | TEKwsauto25!             |                        |
 | Fredrick Ketangenyi      | WSAUTO25-39  | TEKwsauto25!             |                        |
 | Caroline Mazariegos      | WSAUTO25-40  | TEKwsauto25!             |                        |
-| Ramesh Ramachandran      | WSAUTO25-41  | TEKwsauto25!             |                        |
+| Fawaz Adetunji           | WSAUTO25-41  | TEKwsauto25!             |                        |
 | Matthew Rodriguez        | WSAUTO25-42  | TEKwsauto25!             |                        |
 | Kouh Ho                  | WSAUTO25-43  | TEKwsauto25!             |                        |
 | John L Martin            | WSAUTO25-44  | TEKwsauto25!             |                        |
-| Srinivas Tumuluri        | WSAUTO25-45  | TEKwsauto25!             |                        |
+| Isha Patel               | WSAUTO25-45  | TEKwsauto25!             |                        |
 | Debarshi Chakma          | WSAUTO25-46  | TEKwsauto25!             |                        |
 | Karl Grissom             | WSAUTO25-47  | TEKwsauto25!             |                        |
 | Yanmife Atewogbola       | WSAUTO25-48  | TEKwsauto25!             |                        |
